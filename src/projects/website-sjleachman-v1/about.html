@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Comfortaa|Jura|Orbitron|Play" rel="stylesheet">
+    <script type="text/javascript" src="js/radialprogress.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <title>SJL | About</title>
+</head>
+
+<body id="body">
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Main Nav - Navagation bar at top of page 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <nav class="navbar navbar-expand-lg sticky-top" id="main-nav">
+        <div class="container" id="main-nav-row">
+            <div class="row align-items-center" id="main-nav-row">
+                <div class="col-3">
+                    <span class="" id="nav-open" onclick="openSideMenu()">
+                        <a href="#">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                        </a>
+                    </span>
+                </div>
+                <div id="col-navbar-brand">
+                    <div class="navbar-brand hedder-monogram">
+                    <img src="assets/monogram.png" height="50px" width="77px">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <ul class="navbar-nav" id="navbar-links">
+                        <div class="form-inline">
+                            <li class="nav-item"><a class="nav-link" id="active" href="about.html"><i class="far fa-user"></i>About</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Code Journal
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="nav-link" href="journal.html"><i class="fas fa-book"></i>Journal</a>
+                                    <a class="nav-link" href="projects.html"><i class="fas fa-file-code"></i>Projects</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="nav-link" href="resources.html"><i class="fa fa-archive"></i>Resources</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#contactForm" href="#" ><i class="far fa-address-card"></i>Contact</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Slide out navagation with -->
+    <div id="sideMenu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+        <div class="navbar-brand">
+                <a class="imgHome" href="website_sjl_v1.html"><img src="assets/monogram.png" width="150px" height="100px"></a>
+        </div>  
+        <ul class="navbar-nav" id="slide-menu-linls">
+            <li class="nav-item"><a class="nav-link" id="active" href="about.html"><i class="far fa-user"></i>About</a></li>
+           
+            <!-- SlideOut Dropdown Menu -->
+            <li class="nav-item dropdown" id="dropdown-menu-slide-nav-items">
+                <a onclick='addMargin()' class="nav-link dropdown-toggle" href="#" id="navbarDropdownSlideMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code Journal</a>
+                <div id="dropdown-menu-slide-nav" class="dropdown-menu" aria-labelledby="navbarDropdown" style="position: relative; transform: translate3d(0px, 50px, 0px); top: 0px; left: 0px; will-change: transform;">
+                    <a class="nav-link" href="journal.html"><i class="fas fa-book"></i></i>Journal</a>
+                    <a class="nav-link" href="projects.html"><i class="fas fa-file-code"></i>Projects</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="nav-link" href="resources.html"><i class="fa fa-archive"></i>Resources</a>
+                </div>
+            </li>
+            <!--  -->
+            <li id="dropdown-bottom-nav-item" class="nav-item"><a class="nav-link" onclick="closeSideMenu()" data-toggle="modal" data-target="#contactForm" href="#"><i class="far fa-address-card"></i>Contact</a></li>
+        </ul>
+        <footer id="side-nav-social-medial" class="social-media">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/LeachmanCapital?lang=en" target="blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://plus.google.com/110990843868980982964" target="blank"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="https://github.com/globalumbrella" target="blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Main Cantent Section 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    
+    <!-- Main cantent -->
+    <div class="headder-img"></div>
+    <section class="container" id="main-container">
+    <div class="container" id="profile-img">
+        <div class="row justify-content-center">
+            <div class="col col-12 col-sm-12 col-md-8 col-xl-6">
+                <img src="assets/stephen.png">
+                <h1>Stephen J. Leachman</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div  class="row" id="main-row">
+            <section class="col col-12" id="about">
+                <article>
+                    <h2>About</h2>
+                    <p><strong>Hello!</strong>  and thanks for dropping by my personally developed website . In January 2018 for somewhat of a new year’s resolution, I’ve set out on a quest to learn how to code. My background is within finance and for the past 6 years I’ve been actively trading and managing personal accounts within U.S Equities, Options and Forex markets (“more on this below”).</p><p>Alongside the financial markets, I have a passion for technology and with an ambitious plan to build a web-based application tailored to help retail traders/investors improve their over-all P&L results.</p><p>I’ve begun my journey into codding and programming. This website is my first project and so far, there’s nothing special its design. I’ve used basic HTML, CSS and a little bit of JavaScript, and the integration of bootstrap, just basics front-end stuff. I’ve designed this website to represent my personal resume, experiences and portfolio. Here I will display my future projects as I improve my skill-set of coding skills, please enjoy.</p>
+                </article>
+            </section>
+            <section class="col col-12 col-sm-12 col-md-12 col-lg-7 col-xl-8" id="education">
+                <article>
+                    <h2>Education</h2>
+                    <p>I must first start out by saying, I have no formal education beyond my primary education. All the knowledge and skills I have acquired. whether it be in business, economics, trading, investing and now coding, has come from self-discipline of educating myself on the subjects that have been involved in my experience. I have always had an entrepreneurial mind-set and a strong will to achieve any goal that I’ve set for myself. This same character is also true for me now as I learn how to code. Although I am now currently enrolled in tacking online classes from Team Tree House due to their structured learning process for coding, I also employ specific “Web Searches” to further </p>
+                </article>
+            </section>
+             <!-- Nested row ellament -->
+            <section class="col col-12 col-sm-12 col-md-12 col-lg-5 col-xl-4" id="languages">
+            <div class="container align-items-center" id="languages-nest">
+            <div class="row align-items-center">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h3>Languages I Speak</h3>
+                </div>
+                <div class="col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <img src="assets/english.png" alt="english">
+                    <h4>English</h4>
+                </div>
+                <div class="col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <img src="assets/spanish.png" alt="spanish">
+                    <h4>Spanish</h4>
+                </div>
+            </div>
+            </div>
+            </section>
+            <section class="container" id="trading-skills">
+                <div class="row">
+                <article class="col col-12 col-sm-12 col-md-12 col-lg-9 col-xl-8">
+                    <h2>My Skills As A Trader</h2>
+                    <p>As mentioned for the past 6 years I´ve been actively trading in the financial markets. I have attained knowledge in all asset classes but most of my experience is within trading U.S Options and Forex – more commonly known as the “global currency markets”.</p><p>To elaborate a bit on my options trading.</p><p>I construct a portfolio with a diverse set of multi-leg option strategies that are:</p>
+                    <ul>
+                        <li>derivatives of large and medium cap U.S. equities, plus</li>
+                        <li>a selection of macro ETS's</li>
+                    </ul>
+                        <p>I deploy these strategies based on:</p>
+                    <ul>
+                        <li>specific market conditions, and</li>
+                        <li>a disciplined analytical approach</li>
+                    </ul>
+                    <p>Within the FX market, I mostly trade intra-day. I’ve developed multiple strategies that allow me to capture short term profits wile simultaneously maintaining a low risk profile.</p><p>The foundation to all the strategies I’ve developed are the analytics that support them. I use technical analysis such as:</p>
+                    <ul>
+                        <li>levels of support and resistance</li>
+                        <li>Fibonacci analysis </li>
+                        <li>price momentum </li>
+                        <li>patterns</li>
+                        <li>breakouts</li>
+                        <li>reversals</li>
+                        <li>time series analysis</li>
+                        <li>correlation analysis</li>
+                        <li>and a variety of technical indicators.</li>
+                    </ul>
+                    <p>I also analyze the state of the economy based on a set of economic indicators I follow inclusive of central bank activities with their monetary policies. All this is done to determine the future projection of the market and to allocate funds accordingly.</p>
+                </article>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-3 col-xl-4" id="trading-skills-graphs">
+            <div id="flex-1">
+                <div id="asset-classes">
+                    <script> var bar=new RadialProgress(document.getElementById("asset-classes"),{progress:1.,colorFg:"#f7630c",thick:4,fixedTextSize:0.25});</script>
+                </div>
+                <h3>Asset Classes</h3>
+            </div>
+            <div id="flex-1">
+                <div id="technical-analysis">
+                    <script> var bar=new RadialProgress(document.getElementById("technical-analysis"),{progress:0.95,colorFg:"#f7630c",thick:4,fixedTextSize:0.25});</script>
+                </div>
+                <h3>Technicals</h3>
+            </div>
+            <div id="flex-1">
+                <div id="fundamental-analysis">
+                    <script> var bar=new RadialProgress(document.getElementById("fundamental-analysis"),{progress:0.45,colorFg:"#f7630c",thick:4,fixedTextSize:0.25});</script>
+                </div>
+                <h3>Fundamentals</h3>
+            </div>
+            <div id="flex-1">
+                <div id="economics">
+                    <script> var bar=new RadialProgress(document.getElementById("economics"),{progress:0.80,colorFg:"#f7630c",thick:4,fixedTextSize:0.25});</script>
+                </div>
+                <h3>Economics</h3>
+            </div>
+            </div>
+        
+            </section>
+            <section class="container" id="program-skils-container">
+                <div class="row">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="program-skils">
+                        <h2>Skill Set With Professional Programs</h2>
+                    </div>
+                    <div class="container" id="program-skils-flix">
+                    <div class="row">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" id="word">
+                        <img src="assets/Asset 8.png" alt="Microsoft Word Icon">
+                            <h4>Microsoft Word</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%"></div>
+                        </div>   
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" id="excel">
+                        <img src="assets/Asset 9.png" alt="Microsoft Excel Icon">
+                            <h4>Microsoft Excel</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width: 83%"></div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" id="powerpoint">
+                        <img src="assets/Asset 7.png" alt="Microsoft Powerpoint Icon">
+                            <h4>Microsoft Powerpoint</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" id="access">
+                        <img src="assets/Asset 6.png" alt="Microsoft Access Icon">
+                            <h4>Microsoft Access</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" id="illastrater">
+                        <img src="assets/Asset 4.png" alt="Adobe Illustrator Icon">
+                            <h4>Adobe Illustrator</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" id="potoshop">
+                        <img src="assets/Asset 3.png" alt="Adobe Photoshop Icon">
+                            <h4>Adobe Potoshop</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="xd">
+                        <img src="assets/Asset 1.png" alt="Adobe Xd Icon">
+                            <h4>Adobe Xd</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <section class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="codding-skills">
+                <h2>Coding Skills</h2>
+                <p>To date, I know basic HTML, CSS and JavaScript and am currently learning more advance CSS and JavaScript features now. I’m learning all the front-end technologies and frameworks first. I will then move to the back-end PHP, MySQL data bases and server-side technologies. When completed, this will coin me the job title within the industry as a “full stack developer” and I will have obtained the knowledge and skill required to complete my web-based application.</p><p>I also plan on learning Python mainly because it’s a great language to use within the financial markets. Python will allow me to automate a few of my strategies, run advance quantitative analysis and implement machine learning, all the fun stuff. </p>
+                
+                <h5 class="indent" id="target-color">A brief description of my capabilities are as follows:</h5>     
+            </section>
+            <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="html">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <img src="assets/html.png" alt="HTML Icon">
+                <p>HTML - or Hypertext Markup Language, this is the basic layout of the content in any webpage. I’ve picked up on HTML quick and now I can wright clean efficient HTML files.</p>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="css">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <img src="assets/css.png" alt="CSS Icon">
+                <p>CSS - or Cascading Style Sheet, this is what we use to style and make the website look professional. I can wright basic CSS code but am currently learning more advance features such as Sass and CSS frameworks.</p>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="javascript">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <img src="assets/js.png" alt="CSS Icon">
+                <p>JavaScript- gives any website its functionality and is where the real code begins with variables, strings, arrays and loops. I’m currently working with the basics of JavaScript and learning more advance features.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Cantact Modal
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/contact-form.png" alt="Img Of Stephen">
+                <h4 class="modal-title" id="exampleModalCenterTitle">Send Me An Email</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" method="POST" action="https://formspree.io/globalumbrella16@gmail.com">
+                    <div class="form-row">
+                    <div class="col">
+                        <label for="name">Name:</label>
+                        <input id="name" class="form-control" type="text" name="name" maxlength="30" placeholder="Name" required>
+                    </div>
+                    
+                    <div class="col">
+                    <label for="company">Company:</label>
+                    <input id="company" class="form-control" type="text" name="_company" placeholder="Company">
+                    </div>
+                    </div>
+                    <label for="email">Email:</label>
+                    <input id="email" class="form-control" type="email" name="email" placeholder="Email" required>
+
+                    <label for="subject">Subject:</label>
+                    <input id="subject" class="form-control" type="text" name="_subject" placeholder="Subject">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" class="form-control form-light" name="message" placeholder="Message" required></textarea>
+
+                    <input type="hidden" name="_next" value="http://sjleachman.com/about.html" />
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Main Footer Section
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col order-last col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+                    <small>&COPY;2018 sjleachman.com All Rights Reserved</small>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-6 order-last col-lg-6 col-xl-6">
+                    <nav class="social-media">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://twitter.com/LeachmanCapital?lang=en" target="blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://plus.google.com/110990843868980982964" target="blank"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="https://github.com/globalumbrella" target="blank"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

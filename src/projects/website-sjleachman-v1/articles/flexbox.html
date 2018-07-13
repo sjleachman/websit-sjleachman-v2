@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Comfortaa|Jura|Orbitron|Play" rel="stylesheet">
+    <script type="text/javascript" src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/articles_css/flexbox.css">
+    <title>SJL | Code Journal</title>
+</head>
+
+<body id="body">
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Main Nav - Navagation bar at top of page 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <nav class="navbar navbar-expand-lg sticky-top" id="main-nav">
+        <div class="container" id="main-nav-row">
+            <div class="row align-items-center" id="main-nav-row">
+                <div class="col-3">
+                    <span class="" id="nav-open" onclick="openSideMenu()">
+                        <a href="#">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                        </a>
+                    </span>
+                </div>
+                <div id="col-navbar-brand">
+                    <div class="navbar-brand">
+                    <img class="hedder-monogram" src="../assets/monogram.png" height="50px" width="77px">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <ul class="navbar-nav" id="navbar-links">
+                        <div class="form-inline">
+                            <li class="nav-item"><a class="nav-link" href="../about.html"><i class="far fa-user"></i>About</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Code Journal
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="nav-link" href="../journal.html"><i class="fas fa-book"></i>Journal</a>
+                                    <a class="nav-link" href="../projects.html"><i class="fas fa-file-code"></i>Projects</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="nav-link" href="../resources.html"><i class="fa fa-archive"></i>Resources</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#contactForm" href="#"><i class="far fa-address-card"></i>Contact</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Slide out navagation with -->
+    <div id="sideMenu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+        <div class="navbar-brand">
+            <a class="imgHome" href="../website_sjl_v1.html"><img src="../assets/monogram.png" width="150px" height="100px"></a>
+        </div>  
+        <ul class="navbar-nav" id="slide-menu-linls">
+            <li class="nav-item"><a class="nav-link" href="../about.html"><i class="far fa-user"></i>About</a></li>
+            <li id="dropdown-bottom-nav-item" class="nav-item"><a class="nav-link" href="../projects.html"><i class="far fa-address-card"></i>Contact</a></li>
+            <!-- SlideOut Dropdown Menu -->
+            <li class="nav-item dropdown" id="dropdown-menu-slide-nav-items">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSlideMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code Journal</a>
+                <div id="dropdown-menu-slide-nav" class="dropdown-menu" aria-labelledby="navbarDropdown" style="position: relative; transform: translate3d(0px, 50px, 0px); top: 0px; left: 0px; will-change: transform;">
+                    <a class="nav-link" href="../journal.html"><i class="fas fa-book"></i></i>Journal</a>
+                    <a class="nav-link" href="../projects.html"><i class="fas fa-file-code"></i>Projects</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="nav-link" href="../resources.html"><i class="fa fa-archive"></i>Resources</a>
+                </div>
+            </li>
+            <!--  -->
+        </ul>
+        <footer id="side-nav-social-medial" class="social-media">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/LeachmanCapital?lang=en" target="blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://plus.google.com/110990843868980982964" target="blank"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="https://github.com/globalumbrella" target="blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Main Cantent Section 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <article class="container" id="main-container">
+
+        <h1 >All About FlexBox</h1>
+        <div class="row">
+            <div class="col-12"><h5  id="define-flex-container">Define A Flex Container</h5></div>
+            <div class="col-12 col-md-6"> 
+                <p>When using flexbox the first step is to define a container (A parent element that nests child elements) These child elements are then called Flex Items. To define a flex-container, the CSS properties are:</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span id="flex-direction"><code>}</code></span>
+                </div>
+            </div>
+            <div class="mr-top col-12"><h5>Flex Direction</h5></div>
+            <div class="col-12 col-md-6"> 
+                <p>Controlling the Direction of Flex Items inside the container working with the properties of the main container we can set the <strong>flex-direction.</strong> Note that <strong>Row</strong> is the default value. There are more direction that we can set:</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code><strong>flex-direction: row;</strong></code></span><br>
+                    <span><code>}</code></span>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="code-block">
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: <strong>row-reverse;</strong><span class="comment"> /* To reverse the direction flex items in a row */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: <strong>column</strong><span class="comment">  /* rotates the main axis so that flex items are laid out vertically. */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: column;<strong>-reverse;</strong><span class="comment">   /* Like the row-reverse property, you can swap the top-to-bottom direction of a column with the    valule */</span></code></span><br>
+                    <span id="flex-wrap"><code>}</code></span>
+                </div>
+            </div>
+            <div class="mr-top col-12"><h5>Flex Wrap</h5></div>
+            <div class="col-12 col-md-6"> 
+                <p>The <strong>flex-wrap</strong> property allows flex containers to break items onto multiple lines and allow them to wrap as needed. Note that the <strong>flex-wrap</strong> property is for flex containers only:</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code><strong>flex-wrap: wrap;</strong></code></span><br>
+                    <span id="justify-content"><code>}</code></span>
+                </div>
+            </div>
+            <div class="mr-top col-12"><h5 >Justify Cntent</h5></div>
+            <div class="col-12 col-md-12"> 
+                <p>Distributing Space Inside a Flex Container can be done with the <strong>justify-content</strong> property which lets you control the position and alignment of flex Items on the main axis and how space should be distributed in a flex container. Note: The <strong>justify-content</strong> property to flex containers only.</p>
+            </div>
+            <div class="col-12">
+                <div class="code-block">
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code>flex-wrap: wrap;</code></span><br>
+                    <span class="css-p"><code><strong>justify-content: flex-start;</strong> <span class="comment">/* The default value which places items towards the start of each flex line */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code>flex-wrap: wrap;</code></span><br>
+                    <span class="css-p"><code>justify-content:<strong>flex-end;</strong><span class="comment"> /* place items at the end of the flex container */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code>flex-wrap: wrap;</code></span><br>
+                    <span class="css-p"><code>justify-content:<strong>center;</strong><span class="comment"> /* place items at the center of the flex container */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code>flex-wrap: wrap;</code></span><br>
+                    <span class="css-p"><code>justify-content:<strong>space-between;</strong><span class="comment">  /* displays equal spacing between flex items */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code>flex-wrap: wrap;</code></span><br>
+                    <span class="css-p"><code>justify-content:<strong>space-around;</strong><span class="comment">  /* displays equal spacing around every flex item */</span></code></span><br>
+                    <span id="order"><code>}</code></span><br>
+                </div>
+            </div>
+            <div class="mr-top col-12"><h5 >Order</h5></div>
+            <div class="col-12 col-md-6"> 
+                <p>Changing the Order of Flex Items. By default, flex items are laid out in the order they appear in the source code. We can use the <strong>order</strong> property to change the order of any flex item. Note: The <strong>order</strong> property applies to the flex item only.</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.item 1 {</code></span><br>
+                    <span class="css-p"><code><strong>order: 0;</strong><span class="comment">  /* Expands flex items to take up the full space of a line. */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.item 2 {</code></span><br>
+                    <span class="css-p"><code><strong>order: -1;</strong><span class="comment">  /* The higher the flex-grow value, the more an item grows relative to the other items. */</span></code></span><br>
+                    <span id="flex-grow"><code>}</code></span>
+                </div>
+            </div>
+            <div class="mr-top col-12"><h5>Flex Grow</h5></div>
+            <div class="col-12 col-md-6"> 
+                <p>Growing Flex Items. Flex items can grow or shrink in relation to other flex items and the available space inside the flex container. Note the <strong>flex-grow</strong> value is by default set to 0 and can only be applied to the <strong>flex-items</strong> </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.items {</code></span><br>
+                    <span class="css-p"><code><strong>flex-grow: 1;</strong><span class="comment">   /* Expands flex items to take up the full space of a line. */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.item-1 {</code></span><br>
+                    <span class="css-p"><code><strong>flex-grow: 3;</strong><span class="comment">  /* The higher the flex-grow value, the more an item grows relative to the other items. */</span></code></span><br>
+                    <span id="flex-basis"><code>}</code></span>
+                </div>
+            </div>
+            <div class="mr-top col-12"><h5>Flex Basis</h5></div>
+            <div class="col-12 col-md-6"> 
+                <p>The <strong>flex-basis</strong> property gives you even more control over the size of flex items, and the flex shorthand property intelligently sets flexbox values when you don't specify them. Note: flex and <strong>flex-basis</strong> can only be applied to flex items.</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.items {</code></span><br>
+                    <span class="css-p"><code>flex-grow: 1;</code></span><br>
+                    <span class="css-p"><code><strong>flex-basis:  150px;</strong><span class="comment">  /* The flex-basis except values the same as width and high property's (px, em, %, ext.) */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.items {</code></span><br>
+                    <span class="css-p"><code><strong>flex: 1  150px;</strong><span class="comment">  /*  same as above. Flex = ( flex-grow, flex-basis and flex-shrink. )*/</span></code></span><br>
+                    <span><code>}</code></span>
+                </div>
+            </div>
+            <div class="mr-top col-12"><h5>Align Items</h5></div>
+            <div class="col-12 col-md-12"> 
+                <p>Align flex items on the cross axis with the align-items and align-self properties. Note: the <strong>align-items</strong> aligns flex items vertically in the flex container and can only be applied to the flex container, whereas the <strong>align-self</strong> is a property that can be used on individual flex items.</p>
+            </div>
+            <div class="col-12 col-md-12">
+                <div class="code-block">
+                <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code>flex-wrap: wrap;</code></span><br>
+                    <span class="css-p"><code>justify-content: flex-start;</span></code></span><br>
+                    <span class="css-p"><code>height: 400px;</span></code></span><br>
+                    <span class="css-p"><code><strong>align-items: flex-start;</strong><span class="comment">/* aligns all flex items to the start of the cross axis */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code>flex-wrap: wrap;</code></span><br>
+                    <span class="css-p"><code>justify-content: flex-start;</span></code></span><br>
+                    <span class="css-p"><code>height: 400px;</span></code></span><br>
+                    <span class="css-p"><code>align-items: <strong>flex-end;</strong> <span class="comment">  /* aligns all flex items to the end of the cross axis */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                <span><code>.container {</code></span><br>
+                    <span class="css-p"><code>display: flex;</code></span><br>
+                    <span class="css-p"><code>flex-direction: row;</code></span><br>
+                    <span class="css-p"><code>flex-wrap: wrap;</code></span><br>
+                    <span class="css-p"><code>justify-content: flex-start;</span></code></span><br>
+                    <span class="css-p"><code>height: 400px;</span></code></span><br>
+                    <span class="css-p"><code>align-items: <strong>center;</strong> <span class="comment"> /* aligns all flex items to the center of the cross axis */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                </div>
+            </div>
+            <div class="col-12 col-md-12">
+                <div class="code-block">
+                    <span><code>.item-2 {</code></span><br>
+                    <span class="css-p"><code><strong>align-self: flex-start</strong><span class="comment">  /* aligns a flex item to the start of the cross axis. */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.item-2 {</code></span><br>
+                    <span class="css-p"><code>align-self: <strong>flex-end;</strong><span class="comment">  /* aligns a flex item to the end of the cross axis. */</span></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.item-2 {</code></span><br>
+                    <span class="css-p"><code>align-self: <strong>center;</strong><span class="comment">  /* aligns a flex item to the end of the cross axis. */</span></code></span><br>
+                    <span><code>}</code></span>
+                </div>
+            </div>
+            <div class="mr-top col-12"><h5>Vertical and Horizontal Centering</h5></div>
+            <div class="col-12 col-md-6"> 
+                <p>three ways to center-align elements using flexbox</p>
+                <p>Set the flex container's justify-content and align-items values to center:</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code><strong>justify-content: center;</strong></code></span><br>
+                    <span class="css-p"><code><strong>align-items: center;</strong></code></span><br>
+                    <span><code>}</code></span><br>
+                </div>
+            </div>
+            <div class="col-12 col-md-6"> 
+                <p>Set the flex item's margin value to auto:</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.items {</code></span><br>
+                    <span class="css-p"><code><strong>margin: auto;</strong></code></span><br>
+                    <span><code>}</code></span><br>
+                </div>
+            </div>
+            <div class="col-12 col-md-6"> 
+                <p>Set the flex container's justify-content value to center, while setting the flex item's align-self value to center:</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="code-block">
+                    <span><code>.container {</code></span><br>
+                    <span class="css-p"><code><strong>justify-content: center;</strong></code></span><br>
+                    <span><code>}</code></span><br>
+                    <span><code>.items {</code></span><br>
+                    <span class="css-p"><code><strong>align-self: center;</strong></code></span><br>
+                    <span><code>}</code></span><br>
+                </div>
+            </div>
+            <div class="col-12 col-md-12">
+                <a href="../journal.html" class="btn btn-secondary" role="button" aria-pressed="true">Close Article</a>
+                <a href="#" class="btn btn-secondary" role="button" aria-pressed="true">Top Of Page</a>
+            </div>
+        </div>
+    </article>
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Cantact Modal
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/contact-form.png" alt="Img Of Stephen">
+                <h4 class="modal-title" id="exampleModalCenterTitle">Send Me An Email</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" method="POST" action="https://formspree.io/globalumbrella16@gmail.com">
+                    <div class="form-row">
+                    <div class="col">
+                        <label for="name">Name:</label>
+                        <input id="name" class="form-control" type="text" name="name" maxlength="30" placeholder="Name" required>
+                    </div>
+                    
+                    <div class="col">
+                    <label for="company">Company:</label>
+                    <input id="company" class="form-control" type="text" name="_company" placeholder="Company">
+                    </div>
+                    </div>
+                    <label for="email">Email:</label>
+                    <input id="email" class="form-control" type="email" name="email" placeholder="Email" required>
+
+                    <label for="subject">Subject:</label>
+                    <input id="subject" class="form-control" type="text" name="_subject" placeholder="Subject">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" class="form-control form-light" name="message" placeholder="Message" required></textarea>
+
+                    <input type="hidden" name="_next" value="http://sjleachman.com/articles/flexbox.html" />
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>       
+     
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Main Footer Section
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col order-last col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+                    <small>&COPY;2018 sjleachman.com All Rights Reserved</small>
+                </div>
+                <div class="col order-last col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <nav class="social-media">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://twitter.com/LeachmanCapital?lang=en" target="blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://plus.google.com/110990843868980982964" target="blank"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="https://github.com/globalumbrella" target="blank"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

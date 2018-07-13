@@ -1,0 +1,176 @@
+/* _______ Projects overview styles ________________________________________________________________________________________________*/
+.projects-overview {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+}
+#projects-overview {
+    background-color: #f1f1f1;
+    padding: 20px 40px 20px 40px;
+    text-align: center;
+    min-height: 200px;
+}
+#top-row {
+    max-width: 100%;
+}
+#projects-overview h2 {
+    margin: 15px 0 10px 0;
+}
+#projects-overview nav .nav-link{
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1.2px;
+    color: #515151;
+}
+#projects-overview nav .active{
+    border-bottom: 2px solid #f7630c;
+    color: #f7630c;
+    padding-bottom: 0px;
+    height: 35px;;
+}
+#projects-overview nav .nav-link:hover{
+    color: #f7630c;
+}
+@media (max-width: 1200px) {
+    #projects-overview h2 {
+        margin: 15px 0 8px 0;
+    }
+    #projects-overview p{
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    #projects-overview nav{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 575.98px) {
+    #projects-overview nav a{
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+@media (max-width: 480px) {
+    #projects-overview nav .nav-link{
+        font-size: 0.9em;
+    }
+}
+
+/* _____ Project card styles__________________________________________________________________________________________________ */
+
+.card-columns ul {
+    list-style: none;
+}
+#project-card {
+    background: #f1f1f1;
+    min-height: 400px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+#project-card .card-img-holder {
+    max-height: 220px;
+}
+#project-card img {
+    max-height: 220px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #f7630c;
+    position: relative;
+}
+#project-card h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #f7630c;
+    font-family: 'Play', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 1.px;
+    text-align: center;
+}
+#project-card p {
+    padding: 0 20px 10px 20px;
+    margin: 0;
+    text-align: left;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: 1.px;
+    font-size: 1em;
+}
+#project-card small {
+    font-family: 'Jura', sans-serif;
+    color: #535353;
+    display: block;
+    text-align: right;
+    padding: 10px;
+}
+#project-card .link{
+    color: #535353;
+    font-style: italic;
+}
+#project-card .link:hover{
+    color: #f7630c;
+    text-decoration: none;
+}
+#project-card .card-footer {
+    background-color:#E6E6E6;
+    height: 55px;
+    position: relative; 
+}
+#project-card .card-footer ul {
+    display: block;
+    width: 100%;
+}
+#project-card .card-footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+#project-card .card-footer ul li a {
+    color: #515151;
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1.px;    
+    text-decoration: none;
+}
+#project-card .card-footer ul li a:hover {
+    color: #f7630c;
+}
+#project-card .card-footer .fa-angle-double-down {
+    float: right;
+    margin: 5px 5px;
+}
+#project-card .footlink {
+    float: left;
+    margin-right: 30px;
+}
+@media (max-width: 1100px) {
+    .card-columns {
+        column-count: 2;
+      }
+}
+@media (max-width: 768px) {
+    #project-card .card-footer .footlink {
+        float: none;
+        margin: 10px;
+    }
+    #project-card .card-footer ul {
+        padding: 0;
+    }
+    #project-card .card-footer ul li {
+        margin: 0;
+    }
+}
+@media (max-width: 680px) {
+    .card-columns {
+        column-count: 1;
+        margin: 0px 60px 10px 60px;
+      }
+}
+@media (max-width: 610px) {
+    .card-columns {
+        margin: 10px 4px 10px 4px;
+      }
+}
+@media (max-width: 400px) {
+    .card-columns {
+        margin: 0;
+     }
+}
+/* _____ Footer Mad __________________________________________________________________________________________________ */

@@ -1,0 +1,735 @@
+// GLOBAL - COLOR THEME
+$primary: #039BE5 !default;
+$secondary: #00ACC1 !default;
+$gradient: linear-gradient(to bottom right, #039BE5, #00ACC1) !default;
+$light-primary: #E6E9ED !default;
+$dark-primary: #263238 !default;
+
+
+
+// GLOBAL - FONT SIZE THEME
+$p: 1.4rem;
+
+
+// GLOBAL - CONTAINER
+.container{
+  max-width: 1400px;
+}
+@media (max-width: 1430px){
+  .container{
+    padding: 0 40px 0 40px;
+  }
+}
+@media (max-width: 576px){
+  .container{
+    padding: 0 20px 0 20px;
+  }
+}
+@media (max-width:400px){
+  .container{
+    padding: 0 15px 0 15px;
+  }
+}
+
+// GLOBAL - MAIN NAV
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767.98px) {
+  body nav ul{
+    li:first-child{
+      margin-top: 20px;
+    }
+    li:last-child{
+      margin-bottom: 20px;
+    }
+  } 
+}
+
+// GLOBAL - MAIN FOTTER - FOOTER
+#main-footer{
+  font-weight: 2000;
+  color: lightgray;
+  p{
+    color: #93999c;
+  }
+  
+  #footerLink{
+    color: lightgray;
+  }
+  #footerLinkActive{
+    color: #93999c;
+    text-decoration: none;
+    cursor: auto;
+  }
+  #footerLink:hover{
+    color: $secondary;
+    text-decoration: none;
+  }
+  button:hover{
+    background: $gradient;
+    border: 1px solid $primary;
+    a{
+      color: white;
+    }
+  }
+  ul li .fa{
+    font-size: 22px;
+    color: lightgray;
+  }
+  ul li .fa:hover{
+   color: $secondary;
+  }
+  .badge{
+    color: lightgray;
+  }
+  .badge:hover{
+    background: $gradient;
+  }
+}
+@media (max-width: 767.98px) {
+  #main-footer{
+    h5 {
+      margin-top: 30px;
+    }
+  }
+}
+// MAIN FOOTER RESPANSAVNESS
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width:450px) {
+  #main-footer{
+    ul li a{
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    ul li .fa{
+      font-size: 18px;
+    }
+  }
+}
+
+
+// ABOUT PAGE 
+// ______________________________________________________________
+
+// PARTICUAL JS HEADER ELLAMENT
+#about{
+  overflow-x: hidden;
+}
+#about #header{
+  background: $gradient;
+  position: relative;
+  height: 550px;
+  width: 100%;
+}
+#about #header:after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top right;
+  transform: skewY(-3deg);
+}
+#about #particles-js{
+  position: relative;
+  width: 100%;
+  height: 650px;
+}
+
+// AVERTAR IMAGE
+#about #about-me .avatar-img{
+  margin-top: -100px;
+  z-index: 2;
+}
+
+#name svg{
+  height: 70px;
+}
+
+// WHAT I DO - LIST GROUP
+#about #about-me{
+  ul{
+    list-style: none;
+  }
+}
+
+// My Education - SECTION
+#about #egu-background {
+  img:first-child{
+    position: relative;
+  }
+  img:last-child{
+    position: absolute;
+  }
+}
+
+#about #education{
+  background: url('../assets/img/education_background.png')  no-repeat;
+  background-position: center;
+  position: relative;
+  min-height: 500px;
+  .background-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $gradient;
+    opacity: 0.9;
+  }
+  .education-icon{
+    z-index: 2;
+    margin-top: -50px;
+  }
+  a{
+    color: white;
+    font-weight: 600;  
+  }
+  a:hover{
+    color: #E6E9ED;
+    text-decoration: none;
+  }
+}
+
+// My SKILLS - SECTION
+#about #skills{
+  background-color: $dark-primary;
+  padding-bottom: 30px;
+  
+  img{
+    margin-top: -50px;
+    z-index: 7;
+  }
+  .card {
+    border-radius: 10px;
+    height: 100%;
+    .card-body{
+      border-radius: 10px;
+      input{
+        border: none;
+        background: $light-primary;
+        text-align: right;
+        width: 50px;
+      }
+      .progress{
+        border-radius: 10px;
+        height: 10px;
+        background-color: white;      
+        .progress-bar{
+          border-radius: 10px;
+          background-color: $gradient;
+        }
+      }
+    }
+  }
+}
+
+// MY TRADING - SECTION
+#about #about-trading {
+  background-color: $light-primary;
+  svg{
+    margin-top: -50px;
+    height: 100px;
+  }
+  #tab-display .list-group {
+    border-radius: 5px;
+  }
+  #content-display{
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    a:hover{
+      text-decoration: none;
+    }
+    
+  }
+  .active{
+    background-color: $gradient;
+  }
+}
+
+// MY DESIGN AND CODING - SECTION
+#about #about-design-coding {
+  background-color: $light-primary;
+  .pluse-icon{
+    margin-top: 15px; 
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  #content-display{
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    a:hover{
+      text-decoration: none;
+    }
+  }
+  .active{
+    background-color: $gradient;
+  }
+}
+
+// ABOUT PAGE // - RESPANSIVE BREAKPOINTS
+// ___________ | ||  ||   |
+
+// CUSTUM SCREEN SIZE
+@media (max-width: 1500px){
+  // PARTICUAL JS HEADER ELLAMENT
+  #about #header{
+    height: 400px;
+  }
+  // AVERTAR IMAGE
+  #about #about-me .avatar-img{
+    height: 210px;
+    margin-top: -70px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  // AVERTAR IMAGE
+  #about #about-me .avatar-img{
+    height: 190px;
+    margin-top: -70px;
+  }
+  #about #name svg{
+    height: 55px;
+  }
+  #content-display{
+    padding: 10px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767.98px) {
+  // PARTICUAL JS HEADER ELLAMENT
+  #about #header{
+    height: 300px;
+  }
+  // AVERTAR IMAGE
+  #about #about-me .avatar-img{
+    height: 150px;
+    margin-top: -60px;
+  }
+  #about #name svg{
+    height: 40px;
+  }
+  // MY TRADING - SECTION
+  #about #about-trading{
+    #content-display{
+      padding:10px;
+      margin: 16px;
+    }
+  }
+  // MY DESIGN AND CODING
+  #about #about-design-coding{
+    #content-display{
+      padding:10px;
+      margin: 16px;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width:400px) { 
+  // My Education 
+#about #what-i-do{
+    h3, h4 {
+      font-size: 1.2em;
+    }
+    img{
+      margin: 0 10px;
+    }
+  }
+  #about #education {
+    background: none;
+    h4{
+      font-size: 1.2em;
+      margin-bottom: 70px;
+      //padding-left: -20px;
+    }
+  }
+  #design-coding-icon-group{
+    img{
+      height: 80px;
+    }
+    h1{
+      padding: 0 10px;
+    }
+  }
+}
+
+// SERVICES PAGE 
+// ______________________________________________________________
+
+#services{
+  background: $light-primary;
+  button{
+    margin-bottom: 10px;
+  }
+  button:hover{
+    background: $gradient;
+    a{
+      color: white;
+    }
+  }
+  #services-overview{
+    padding-bottom: 20px;
+    background: $gradient;
+  } 
+  .border-top{
+    border-top: 1px solid $primary;
+    padding-top: 30px;
+  }
+}
+// SERVICES PAGE // - RESPANSIVE BREAKPOINTS
+// ___________ | ||  ||   |
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #services{
+    #computer {
+      height: 160px;
+    }
+  }
+  h4{
+    font-size: 1.2em;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767.98px) {
+  #services{
+    #services-overview{
+      padding-top: 30px;
+    }
+    #computer {
+      height: 130px;
+      margin-bottom: 20px;
+    }
+    #services-overview{
+      min-height: 300px;
+    } 
+    #check-group img{
+      height: 18px;
+    }
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width:400px) {
+  #services{
+    #services-overview{
+      padding-bottom: 20px;
+    } 
+    #check-group img{
+      height: 14px;
+    }
+    h4{
+      font-size: 1em;
+    }
+  }
+}
+
+// PORTFOLIO PAGE 
+// ______________________________________________________________
+
+#portfolio{
+  nav ul li .on{
+    color: #E6E9ED;
+  }
+  .wrapper{
+    min-height: calc(100vh - 0px); //THE FOOTER HEIGHTH IS 280px
+    background: $light-primary;
+
+    #portfolio-overview{
+      background: white;
+      button:hover{
+        background: $gradient;
+        a{
+          color: white;
+        }
+      }
+      .active{
+        background: $gradient;
+        a{
+          color: white;
+        }
+      }
+    }
+
+    #projects{
+      background: $light-primary;
+  
+      .grid-item-content {       
+        max-width: 100%;
+        padding: 10px;
+        //margin-bottom: 10px;
+  
+        img{
+          display: block;
+          width: 100%; 
+          border-radius: 10px;
+          height: auto;
+        }
+        
+        .card{
+          border-radius: 10px;
+
+          .card-img-top{
+            position: relative;
+            
+            .smooth{
+              position: absolute;
+              bottom: 50%;
+              left: 0;
+              right: 0;
+              background: $gradient;
+              opacity: 0.9;
+              overflow: hidden;
+              width: 100%;
+              height: 0;
+              transition: .5s ease;
+
+              .btn {
+                white-space: nowrap; 
+                display: none;
+                position: absolute;
+                overflow: hidden;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+
+                a{
+                  color: white;
+                }
+              }
+            }
+          }
+          .badge{
+            border-radius: 5px;
+            background: $primary;
+          }
+          a:hover{
+            text-decoration: none;
+          }
+          a.badge{
+            background: $secondary;
+          }
+          .card-footer{
+      
+            ul{
+              li a{
+                color: $dark-primary;
+              }
+            }
+          }
+        }
+        // HOVER EFFICS
+        .card-img-top:hover .smooth{
+          height: 100%;
+          bottom: 0;
+          border-radius: 10px 10px 0 0;
+          .btn{
+            display: block;
+            cursor: pointer;
+          }
+        }
+        .btn:hover{
+          background: none;
+        }
+        a.badge:hover{
+          background: $dark-primary;
+        }
+        .card-footer ul li a:hover{
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+// PORTFOLIO PAGE // - RESPANSIVE BREAKPOINTS
+// ___________ | ||  ||   |
+
+@media (max-width: 1200px) {
+  #portfolio .wrapper #projects{
+
+    .grid-item-content { 
+      padding: 5px;
+      
+    }
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767.98px) {
+  #portfolio .wrapper #projects{
+
+    .grid-item-content { 
+      padding: 10px;
+      margin-bottom: 10px;
+      .smooth{
+        display: none;
+      }
+    }
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width:400px) {
+  #portfolio .wrapper #projects{
+
+    .grid-item-content { 
+      padding: 0px;
+      margin-bottom: 20px;
+      
+    }
+  }
+}
+
+// CONTACT PAGE 
+// ______________________________________________________________
+
+#contact{
+  #background .alert {
+    z-index: 200000;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+  }
+ 
+  #background{
+    height: calc(100vh - 59.5px);
+    width: 100%;
+    background: $gradient;
+    position: relative;
+       
+    #particles-js{
+      position: absolute;
+     //z-index: 1;
+      width: 100%;
+      height: calc(100vh - 66.0px);
+    }
+  }
+  .form{
+    z-index: 999;
+  }
+  .form-head{
+    z-index: 3;
+    position: relative;
+    background: $dark-primary;
+    border-radius: 10px 0 0 10px;
+    ul{
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 10px;
+      li a{
+        padding: 10px;
+        font-size: 1.1em;
+        color: $light-primary;
+      }
+      li a:hover{
+        color: $secondary;
+      }
+    }
+  }
+  .form-body{
+    z-index: 3;
+    border-radius: 0 10px 10px 0;
+    z-index: 100000;
+  }  
+  .form{
+    margin: auto;
+    button{
+      background: $gradient;
+      cursor: pointer;
+    }
+    button:hover{
+      background: $gradient;
+      color: $light-primary;
+    }
+  }
+}
+// CONTACT PAGE // - RESPANSIVE BREAKPOINTS
+// ___________ | ||  ||   |
+
+@media (max-width: 860px) {
+  #contact{
+    h6{
+      font-size: .9em;
+    }
+    .form-head ul{
+      margin-bottom: 10px;
+     
+      li a{
+        font-size: .9em;
+        padding: 8px;
+      }
+    }
+    .form{
+      margin: auto;
+    }
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767.98px) {
+  #contact{
+    #background{
+      height: auto;      
+      #particles-js{
+        height: calc(100% - 6px);
+      }
+    }
+    
+    .form-head{
+      max-width: 500px;
+      margin: 100px 20px 0 20px;
+      height: 290px;
+      background-color: rgba(38, 50, 56, 0.616);
+      border-radius: 10px 10px 0 0;
+      .contact-info{
+        text-align: center;
+        margin-top: -25px;
+      }
+      ul{
+        margin-bottom: 10px;
+
+        li a{
+          padding: 10px;
+          font-size: 1.2em;
+        }
+      }
+    }
+    .form-body{
+      max-width: 500px;
+      margin: 0 20px 50px 20px;
+      border-radius: 0 0 10px 10px;
+    }
+    .form{
+      margin: auto;
+      button{
+      margin-bottom: 10px;
+      }
+    }
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width:450px) {
+  #contact{
+    .form-body{
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .form-head{
+      ul li a{
+        padding: 10px;
+        font-size: .9em;
+      }
+    }       
+  }
+}
+@media (max-width:388px) {
+  #contact .alert button{
+    display: none;
+  }
+}

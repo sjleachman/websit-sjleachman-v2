@@ -1,0 +1,112 @@
+
+/* _______ Projects overview styles ________________________________________________________________________________________________*/
+.projects-overview {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px
+}
+#projects-overview {
+    background-color: #f1f1f1;
+    padding: 20px 40px 20px 40px;
+    text-align: center;
+    min-height: 200px;
+}
+#top-row {
+    max-width: 100%;
+}
+#projects-overview h2 {
+    margin: 15px 0 10px 0;
+}
+@media (max-width: 1200px) {
+    #projects-overview h2 {
+        margin: 15px 0 8px 0;
+    }
+}
+@media (max-width: 575.98px) {
+    #projects-overview {
+        padding: 0 20px 0 20px;
+    }
+    #projects-overview h2 {
+        margin: 245x 0 0 0;
+    }
+}
+@media (max-width: 370px) {
+    #projects-overview {
+        padding: 0 10px 0 10px;
+    }
+}
+/* _______ Resource Card styles ________________________________________________________________________________________________*/
+#resource-card {
+    height: 150px;
+    background: #f1f1f1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
+    border-radius: 10px;
+}
+#resource-card #img-box {
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    float: left;    
+}
+#resource-card img {
+    margin: 10px 10px 17px 10px;
+}
+#resource-card h4 {
+    color: #f7630c;
+    text-align: center;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+#resource-card .edit {
+    font-size: 0.8em;
+    margin-top: 4px;
+    margin-left: 5px;
+    color: #535353;
+}
+#resource-card #resource-card-tags {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    margin:0 0 0 0;
+    padding: 5px 0 0 0;
+    flex-wrap: wrap;
+}
+#resource-card #resource-card-tags li {
+    margin-right: 7px;
+    font-family: 'Play', sans-serif;
+    letter-spacing: 0.5px;
+}
+#resource-card #resource-card-links {
+    position: absolute;
+    bottom: 5px;
+    right: 13px;
+}
+#resource-card #resource-card-links li {
+    display: inline;
+    align-content: flex-end;
+}
+#resource-card #resource-card-links li a {
+    margin-right: 20px;
+    font-size: 1em;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
+    color: #535353; 
+}
+#resource-card #resource-card-links li a:hover {
+    color: #f7630c;
+}
+.fa-book, .fa-home{
+    margin-right: 8px;
+}
+@media (max-width: 1600px) {
+    #resource-card ul  {
+        padding: 0;
+    }
+}
+#main-foot-margin-top {
+    margin-top: 20px;
+}

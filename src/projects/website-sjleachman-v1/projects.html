@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Comfortaa|Jura|Orbitron|Play" rel="stylesheet">
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <title>SJL | Projects</title>
+</head>
+
+<body id="body">
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Main Nav - Navagation bar at top of page 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <nav class="navbar navbar-expand-lg sticky-top" id="main-nav">
+        <div class="container" id="main-nav-row">
+            <div class="row align-items-center" id="main-nav-row">
+                <div class="col-3">
+                    <span class="" id="nav-open" onclick="openSideMenu()">
+                        <a href="#">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                        </a>
+                    </span>
+                </div>
+                <div id="col-navbar-brand">
+                    <div class="navbar-brand">
+                    <img class="hedder-monogram" src="assets/monogram.png" height="50px" width="77px">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <ul class="navbar-nav" id="navbar-links">
+                        <div class="form-inline">
+                            <li class="nav-item"><a class="nav-link" href="about.html"><i class="far fa-user"></i>About</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Code Journal
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="nav-link" href="journal.html"><i class="fas fa-book"></i>Journal</a>
+                                    <a id="active" class="nav-link" href="projects.html"><i class="fas fa-file-code"></i>Projects</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="nav-link" href="resources.html"><i class="fa fa-archive"></i>Resources</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#contactForm" href="#"><i class="far fa-address-card"></i>Contact</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Slide out navagation with -->
+    <div id="sideMenu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+        <div class="navbar-brand">
+            <a class="imgHome" href="website_sjl_v1.html"><img src="assets/monogram.png" width="150px" height="100px"></a>
+        </div>  
+        <ul class="navbar-nav" id="slide-menu-linls">
+            <li class="nav-item"><a class="nav-link" href="about.html"><i class="far fa-user"></i>About</a></li>
+            
+            <!-- SlideOut Dropdown Menu -->
+            <li class="nav-item dropdown" id="dropdown-menu-slide-nav-items">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSlideMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code Journal</a>
+                <div id="dropdown-menu-slide-nav" class="dropdown-menu" aria-labelledby="navbarDropdown" style="position: relative; transform: translate3d(0px, 50px, 0px); top: 0px; left: 0px; will-change: transform;">
+                    <a class="nav-link" href="journal.html"><i class="fas fa-book"></i></i>Journal</a>
+                    <a id="active" class="nav-link" href="projects.html"><i class="fas fa-file-code"></i>Projects</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="nav-link" href="resources.html"><i class="fa fa-archive"></i>Resources</a>
+                </div>
+            </li>
+            <!--  -->
+            <li id="dropdown-bottom-nav-item" class="nav-item"><a class="nav-link" onclick="closeSideMenu()" data-toggle="modal" data-target="#contactForm" href="#"><i class="far fa-address-card"></i>Contact</a></li>
+        </ul>
+        <footer id="side-nav-social-medial" class="social-media">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/LeachmanCapital?lang=en" target="blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://plus.google.com/110990843868980982964" target="blank"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="https://github.com/globalumbrella" target="blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Main Cantent Section 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div class="projects-overview">
+        <div class="row justify-content-center" id="top-row">
+            <div class="col col-12  col-lg-12 col-xl-8" id="projects-overview">
+                <h2>Projects Portfolio</h2>
+                <p>Welcome to my project portfolio page. As I advance through the field of web development I will work on different coding projects to help me gain experience with using different technologies.</p>
+                <nav class="nav">
+                    <a class="nav-link active" href="#">All</a>
+                    <a class="nav-link" href="#">Full Websites</a>
+                    <a class="nav-link" href="#">Random Projects</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+     <!-- New Project container / Grid ------------------------------------------------------------------------------------------------------------------------>
+     <div class="container">
+         <div class="card-columns">
+         <ul>
+            <li id="#">
+                <div id="project-card">
+                    <div class="card-img-holder">
+                        <img src="projects/bootstrapSite/project_cover.png" alt="Project Image"></a>
+                    </div>
+                        <h3>Full Bootstrap 4 Templat</h3>
+                        <p>A single page website template. I've completed this project from a course at <a class="link" href="https://teamtreehouse.com/" target="blank">Team Treehouse.</a> The project task was to build a single page website for a coding and development conference using Bootstrap 4 </p>
+                        <small>May-10-2018</small>
+                    <div class="card-footer">
+                        <ul>
+                            <li><a class="footlink" href="https://github.com/globalumbrella/basic-bootstrap-website/blob/master/index.html" target="blank">View Code</a></li>
+                            <li><a class="footlink" href="projects/bootstrapSite/index.html" target="blank">Demo</a></li>
+                            <!-- <li><a href="#"><i class="fas fa-angle-double-down"></i></a></li> -->
+                        </ul>
+                    </div>  
+                </div>
+            </li>
+            <li id="#">
+                <div id="project-card">
+                    <div class="card-img-holder">
+                        <img src="projects/Number-Facts/numberFactsImg.png" alt="Project Image"></a>
+                    </div>
+                        <h3>Number Facts</h3>
+                        <p>This project lets the user input a number, date or year and will return a fun fact. Main focus was on Bootstrap, Javascript and Fetch API requests.</p>
+                        <small>april-24-2018</small>
+                    <div class="card-footer">
+                        <ul>
+                            <li><a class="footlink" href="https://github.com/globalumbrella/Number-Facts/blob/master/numberFacts.html" target="blank">View Code</a></li>
+                            <li><a class="footlink" href="projects/Number-Facts/numberFacts.html" target="blank">Demo</a></li>
+                            <!-- <li><a href="#"><i class="fas fa-angle-double-down"></i></a></li> -->
+                        </ul>
+                    </div>   
+                </div>
+            </li>
+            <li id="#">
+                <div id="project-card" class="">
+                    <div class="card-img-holder">
+                        <img src="projects/SPX500-Filter/sp500-filter-img.png" alt="Project Image"></a>
+                    </div>
+                        <h3>S&P-500 Filterable List</h3>
+                        <p>A filter with 3 inputs for searching the listed companies within the S&P 500. My focus was on Working With JavaScript for the filterable input.</p><p></p>
+                        <small>april-17-2018</small>
+                    <div class="card-footer">
+                        <ul>
+                            <li><a class="footlink" href="https://github.com/globalumbrella/SPX500-Filter" target="blank">View Code</a></li>
+                            <li><a class="footlink" href="projects/SPX500-Filter/filter.html" target="blank">Demo</a></li>
+                            <!-- <li><a href="#"><i class="fas fa-angle-double-down"></i></a></li> -->
+                        </ul>
+                    </div> 
+                </div>
+            </li>
+            <li id="#">
+                <div id="project-card" class="">
+                    <div class="card-img-holder">
+                        <img src="assets/project-website.png" alt="Project Image"></a>
+                    </div>
+                        <h3>SJLeachman.com</h3>
+                        <p>This website is my first full project. I've used basic HTML, CSS and a little bit of javascript. I also integrated bootstrap's grid system.</p>
+                        <small>march-31-2018</small>
+                    <div class="card-footer">
+                        <ul>
+                            <li><a class="footlink" href="https://github.com/globalumbrella/My-Website" target="blank">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li id="#">
+                <div id="project-card" class="">
+                    <div class="card-img-holder">
+                        <img src="projects/Fullscreen-Video-Landing-Page/project-cover.png" alt="Project Image"></a>
+                    </div>
+                        <h3>Fullscreen Landing Page</h3>
+                        <p>This is a simple full screen video background - landing page. it has my companys logo, name and discription. It is similar to this websites landing page.</p>
+                        <small>march-5-2018</small>
+                    <div class="card-footer">
+                        <ul>
+                            <li><a class="footlink" href="https://github.com/globalumbrella/Fullscreen-Video-Landing-Page/blob/master/demo1.html" target="blank">View Code</a></li>
+                            <li><a class="footlink" href="projects/Fullscreen-Video-Landing-Page/demo1.html" target="blank">Demo</a></li>
+                            <!-- <li><a href="#"><i class="fas fa-angle-double-down"></i></a></li> -->
+                        </ul>
+                    </div>  
+                </div>
+            </li>
+         </ul>
+        </div>
+    </div>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Cantact Modal
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/contact-form.png" alt="Img Of Stephen">
+                <h4 class="modal-title" id="exampleModalCenterTitle">Send Me An Email</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" method="POST" action="https://formspree.io/globalumbrella16@gmail.com">
+                    <div class="form-row">
+                    <div class="col">
+                        <label for="name">Name:</label>
+                        <input id="name" class="form-control" type="text" name="name" maxlength="30" placeholder="Name" required>
+                    </div>
+                    
+                    <div class="col">
+                    <label for="company">Company:</label>
+                    <input id="company" class="form-control" type="text" name="_company" placeholder="Company">
+                    </div>
+                    </div>
+                    <label for="email">Email:</label>
+                    <input id="email" class="form-control" type="email" name="email" placeholder="Email" required>
+
+                    <label for="subject">Subject:</label>
+                    <input id="subject" class="form-control" type="text" name="_subject" placeholder="Subject">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" class="form-control form-light" name="message" placeholder="Message" required></textarea>
+
+                    <input type="hidden" name="_next" value="http://sjleachman.com/index.html" />
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Footer at bottom of page -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col order-last col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+                    <small>&COPY;2018 sjleachman.com All Rights Reserved</small>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-6 order-last col-lg-6 col-xl-6">
+                    <nav class="social-media">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://twitter.com/LeachmanCapital?lang=en" target="blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://plus.google.com/110990843868980982964" target="blank"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="https://github.com/globalumbrella" target="blank"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+h2{
+    padding-top: 40px;
+}
+
+/* _______ headder image style___________________________________________________________ */
+
+.headder-img {
+    height: 290px;
+    background-image: url("../assets/headder-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (max-width: 1200px) {
+    .headder-img {
+        height: 200px;        
+    }
+}
+@media (max-width: 575.98px) {
+    .headder-img {
+    height: 150px;        
+    }
+}
+
+/* _______ Profile img style____________________________________________________________ */
+
+#profile-img {
+    margin: auto 0;
+    text-align: center;
+}
+#profile-img img {
+    margin: -150px 20px 0 20px;
+    max-width: 300px;
+}
+@media (max-width: 1200px) {
+    #profile-img img {
+    margin: -125px 20px 0 20px;
+    max-width: 250px;
+    }
+}
+@media (max-width: 575.98px) {
+    #profile-img img {
+    margin: -95px 20px 0 20px;
+    max-width: 190px;
+    }
+}
+
+/* _______ Main container styles __________________________________________________________*/
+
+#main-container {
+    background-color: #f1f1f1;
+    border-top: 2px solid #f7630c;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0 40px 0 40px;
+}
+@media (max-width: 575.98px) {
+    #main-container {
+        padding: 0 20px 0 20px;
+    }
+}
+@media (max-width: 370px) {
+    #main-container {
+        padding: 0 10px 0 10px;
+    }
+}
+
+/* _______ About Education and languages container styles ________________________________*/
+
+#about p {
+    margin: 0;
+}
+
+#education {
+    padding-right: 20px
+}
+#languages {
+    text-align: center;
+    margin-top: 30px;
+    height: 100%;
+    background-color: #515151;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#languages h3 {
+    margin: 15px 0 15px 0;
+    font-family: 'Play', sans-serif;
+    color: #E6E6E6;
+    letter-spacing: 1.px;
+}
+#languages h4 {
+    margin: 15px 0 15px 0;
+    font-family: 'Play', sans-serif;
+    color: #E6E6E6;
+    letter-spacing: 1.px;
+    text-transform: uppercase;
+}
+#languages img {
+    max-width: 100%;
+}
+@media (max-width: 990px) {
+    #languages {
+    margin-top: 10px;
+    }
+    #education {
+        padding-right: 0;
+    }
+}
+@media (max-width: 370px) {
+    #languages img {
+        width: 75px;
+    }
+}
+
+/* _______ Skills as a trader container styles __________________________________________*/
+
+#trading-skills {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #f7630c;
+}
+#trading-skills ul {
+    font-family: 'Jura', sans-serif;
+    letter-spacing: 1.px;
+    color: #535353;
+    font-size: 1.1em;
+    margin-left: 40px;
+    list-style-image: url('../assets/ul-style.png');
+}
+#trading-skills p {
+    padding-right: 30px;
+}
+#trading-skills-graphs {
+    text-align: center;
+    background-color: #515151;
+    border-radius: 10px;
+    margin: 30px 0 10px 0px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#flex-1 {
+    padding: 20px;
+}
+#asset-classes, #technical-analysis, #fundamental-analysis, #economics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+#trading-skills-graphs h3 {
+    color: #E6E6E6;
+    margin: 0;
+    font-size: 1.5em;
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1.px;
+    text-transform: uppercase;
+}
+@media (max-width: 990px) {
+    #trading-skills-graphs {
+        background-color: #515151;
+        }
+        #flex-1 {
+        width: 50%;
+        }
+        #trading-skills-graphs {
+        flex-direction: row;
+        }
+}
+@media (max-width: 500px) {
+        #flex-1 {
+        width: auto;
+        }
+        #trading-skills-graphs {
+        flex-direction: column;
+        }
+        #trading-skills ul {
+            margin-left: 20px;
+        }
+}
+
+/* _______ Skil set with prosessional programs container styles _____________________________*/
+
+#program-skils {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    padding-top: 30px;
+    border-top: 2px solid #f7630c;
+}
+#program-skils-flix {
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    padding: 20px;
+}
+#word, #excel, #powerpoint, #access, #illastrater, #potoshop, #xd {
+    padding: 20px;
+}
+#word h4, #excel h4, #powerpoint h4, #access h4, #illastrater h4, #potoshop h4, #xd h4 {
+    margin: 25px 0 0 30px;
+    font-size: 1.7em;
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1.px;
+    color: #f7630c;
+}
+#word img, #excel img, #powerpoint img, #access img, #illastrater img, #potoshop img, #xd img {
+    width: 140px;
+    float: left;
+    margin-right: 30px;
+}
+.progress {
+    margin: 15px 10px 0 20px;
+    height: 15px;
+    box-shadow: inset 1px 2px 2px 1px rgba(0, 0, 0, 0.2), inset 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+.progress-bar {
+    background-color:#f7630c;
+    border-radius: 5px;
+}
+@media (max-width: 1200px) {
+    #word img, #excel img, #powerpoint img, #access img, #illastrater img, #potoshop img, #xd img {
+        width: 100px;
+    }
+    #word h4, #excel h4, #powerpoint h4, #access h4, #illastrater h4, #potoshop h4, #xd h4 {
+        margin: 10px 0 0 30px;
+    }
+}
+@media (max-width: 575.98px) {
+    #word img, #excel img, #powerpoint img, #access img, #illastrater img, #potoshop img, #xd img {
+        width: 80px;
+    }
+    #word h4, #excel h4, #powerpoint h4, #access h4, #illastrater h4, #potoshop h4, #xd h4 {
+        margin: 10px 0 0 30px;
+        font-size: 1.2em;
+    }
+    #word, #excel, #powerpoint, #access, #illastrater, #potoshop, #xd {
+        padding: 10px;
+    }
+    .progress {
+        height: 10px;
+    }
+}
+@media (max-width: 358px) {
+    #word img, #excel img, #powerpoint img, #access img, #illastrater img, #potoshop img, #xd img {
+        width: 70px;
+    }
+    .progress {
+        height: 10px;
+    }
+    #word h4, #excel h4, #powerpoint h4, #access h4, #illastrater h4, #potoshop h4, #xd h4 {
+        margin: 5px 0 0 30px;
+        font-size: 1.0em;
+    }
+}
+
+/* _______ Skills with programming container styles __________________________________________*/
+
+#codding-skills {
+    margin: 30px 0 20px 0;
+    padding-top: 30px;
+    border-top: 2px solid #f7630c;
+}
+#target-color {
+    color: #f7630c;
+    font-family:'Play', sans-serif;
+    font-size: 1.5em;
+}
+#html, #css, #javascript {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 12px;
+}
+#html .fa-check, #css .fa-check, #javascript .fa-check {
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    font-size: 30px;
+    color: #f7630c;
+}
+#html img, #css img, #javascript img {
+    width: 190px;
+    margin: 20px 0 30px 0;
+}
+@media (max-width: 1200px) {
+    #html img, #css img, #javascript img {
+        width: 190px;
+        margin: 10px 0 30px 0;
+    }
+}
+@media (max-width: 990px) {
+    #html img, #css img, #javascript img {
+        width: 170px;
+        margin: 10px 0 30px 0;
+    }
+    #html, #css, #javascript {
+        text-align: center;
+        margin-bottom: 0;
+        padding: 12px;
+    }
+}
+@media (max-width: 575.98px) {
+    #html img, #css img, #javascript img {
+        width: 150px;
+        margin: 0 0 10px 0;
+    }
+}

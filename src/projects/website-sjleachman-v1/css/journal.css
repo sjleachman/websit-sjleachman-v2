@@ -1,0 +1,249 @@
+ /* ==============================================================================================
+Journal overview styles
+===============================================================================================*/
+.journal-overview {
+    padding-top: 20px;
+}
+.journal-overview h2{
+    text-align: center;
+    margin: 15px 0 10px 0;
+}
+.journal-overview p{
+    margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+    .journal-overview h2 {
+        margin: 15px 0 8px 0;
+    }
+    .journal-overview nav{
+        margin-bottom: 10px;
+    }
+    .journal-overview p{
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+}
+@media (max-width: 575.98px) {
+    .journal-overview p{
+        margin-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+}
+
+ /* ==============================================================================================
+Filter List Nav Bar
+===============================================================================================*/
+#main-container {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0 40px 0 40px;
+}
+.overview{
+    padding: 20px 0px 20px 0px;
+}
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+#filter-navbar{
+    background: #515151;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    height: 40px;
+    border-left: 4px solid #f7630c;
+    border-right: 4px solid #f7630c;
+}
+#filter-navbar ul li a{
+    color: #ccc;
+    padding: 10px;
+    margin-right: 10px;
+}
+#filter-navbar ul li a:hover{
+    color: #f7630c;
+}
+/* Main Page Icon Styles */
+.fa-html5, .fa-linux, .fa-css3, .fa-js{
+    margin-right: 8px;
+}
+#dropdown-menu-2{
+    background: #515151;
+    border-bottom: none;
+    border-radius:  0px 0px 5px 5px;
+    margin-top: -5px;
+}
+#filter-navbar .navbar-toggler {
+    color: #ccc;
+    padding: 0 10px 0 10px;
+    border: none;
+}
+#filter-navbar .navbar-toggler h5{
+    float: right;
+    margin-left: 20px;
+    margin-top: 3px;
+    font-size: 0.8em;
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1.2px;
+}
+#filter-navbar .navbar-toggler .fa-bars{
+    font-size: 22px;
+    padding-top: 3px;
+}
+ /* ==============================================================================================
+Acordian Styles
+===============================================================================================*/
+
+.card-header{
+    background-color: #f1f1f1;
+    height: 40px;
+    border: 0px solid whitesmoke;
+    border-left: 1px solid #f7630c;
+}
+#accordion ul{
+    margin-bottom: 0;
+}
+#accordion ul li{
+    list-style: none;
+}
+.card-header button {
+    color: #515151;
+    margin-top: -15px;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1.px;
+}
+.card-header button:hover{
+    color: #f7630c;
+    text-decoration: none;
+}
+.card-header button:focus{
+    color: #f7630c;
+    text-decoration: none;
+}
+.card-body{
+    background: #f1f1f1;
+    border-left: 1px dashed #f7630c;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: 1.px;
+    color: #2e2e2e;
+    padding: 10px 10px 20px 10px;
+    padding-top: 15px;
+}
+#accordion .card-body ul{
+    padding: 0 10px 15px 0;
+}
+#accordion .card-body ul li{
+    margin-left: 25px;
+    padding-left: 8px;
+    list-style-image: url('../assets/ul-style.png');
+}
+.card-body h4 {
+    text-align: center;
+    color: #f7630c;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+.card-body h6{
+    color: #f7630c;
+    font-size: 1.2em;
+}
+.card-body .close-notes{
+    width: 150px;
+    height: 40px;
+    color: #f1f1f1;
+    font-weight: bold;
+    background: #515151;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.card-body .close-notes:hover{
+    background: #f7630c;
+}
+ /* ==============================================================================================
+Artical Button Styles
+===============================================================================================*/
+.card-body .btn-secondary{
+    background: #515151;
+    color: #f1f1f1;
+    width: 160px;
+    border-left: 3px solid #f7630c;
+    border-right: 3px solid #f7630c;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    float: right;
+}
+.card-body .btn-secondary:hover{
+    background: #464646;
+    color: #ccc;
+}
+ /* ==============================================================================================
+Code Blocks
+===============================================================================================*/
+.code-block{
+    display: block;
+    background: #515151;
+    border-radius: 10px;
+    padding: 15px 15px 15px 30px;
+    margin: 10px 0 10px 0;
+}
+.code-block .css-p{
+    padding-left: 30px;
+}
+.code-block code {
+    color: #f1f1f1;
+}
+.code-block .comment{
+    color: #ccc;
+}
+.card-body h5 {
+    font-size: 1.5em;
+    text-align: left;
+    color: #f7630c;
+    margin-top: 10px;
+}
+.card-body .mr-top{
+    margin-top: 15px;
+}
+.code-block .code-h5{
+    margin-bottom: 15px;
+    color: #ccc;
+}
+.card-body .link{
+    color: #535353;
+    font-style: italic;
+}
+.card-body .link:hover{
+    color: #f7630c;
+    text-decoration: none;
+}
+ /* ==============================================================================================
+Respansive 
+===============================================================================================*/
+@media (max-width: 1200px) {
+  #main-container{
+      padding: 0 20px 0 20px;
+  }
+}
+@media (max-width: 990px) {
+    #filter-navbar{
+        margin-bottom: 12px;
+        margin-top: 0;
+        height: auto;
+    }
+}
+@media (max-width: 575.98px) {
+    #main-container{
+        padding: 0 10px 0 10px;
+    }
+    .card-body .btn-secondary {
+        margin-top: 15px;
+    }
+}
+/* Main Container Mods */
+
+#main-container{
+    padding-bottom: 30px;
+}
