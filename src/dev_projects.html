@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124413853-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124413853-1');
+  </script>
+
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Links -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ekko-lightbox.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+
+  <!-- FAVICON Img Links -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+  <!-- Scrips - Top -->
+  <script src="js/Chart.bundle.min.js"></script>
+
+  <!-- Google Search Mata Tags -->
+  <meta name="p:domain_verify" content="d773b0b97ac17326cfa969ad43e725d9"/>
+  <meta name="google-site-verification" content="UmdyFW7_mVnUc4KabiKbySVDcsNHuYwCmQjtW9SDc_s"/>
+
+  <!-- Title -->
+  <title>SJLeachman | Portfolio | Development Projects</title>
+
+</head>
+
+<body id="portfolio">
+  <!-- Wrapper -->
+  <div class="wrapper pb-4"> 
+  
+    <!-- Main Navagation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand"><img src="assets/svg/logo_manogram.svg" height="25px" alt="Manogram"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <i class="fa fa-user-o pr-1" aria-hidden="true"></i> About
+              </a>
+            </li>
+            <li class="nav-item pl-3">
+              <a href="services.html" class="nav-link">
+                <i class="fa fa-cogs pr-1" aria-hidden="true"></i> Services
+              </a>
+            </li>
+            <li class="dropdown nav-item pl-3">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-book pr-1" aria-hidden="true"></i> Portfolio
+              </a>
+              <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="personal_projects.html">Personal Projects</a>
+                <a class="dropdown-item active" href="dev_projects.html">Development Projects</a>
+              </div>
+            </li>
+            <li class="nav-item pl-3">
+              <a id="contact" href="contact.html" class="nav-link">
+                <i class="fa fa-address-card-o pr-1" aria-hidden="true"></i> Contact
+              </a>  
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>  <!-- / Main Navagation -->
+
+    <!-- PORTFOLIO OVERVIEW - SECTION -->
+    <div class="loader spinner-1"></div>
+
+    <header class="pt-5 mb-1 mb-lg-4">
+      <h1 class="heading-main mt-5 text-center animated fadeInDown delay-3s">Portfolio</h1>
+      <div class="d-flex justify-content-center">
+        <a id="slide" href="#projects_section" class="heading-lower animated fadeInUp delay-3s" role="button" aria-pressed="true">Decelopment Projects<i class="fa fa-angle-down ml-3" aria-hidden="true"></i></a>
+      </div>
+    </header>
+
+    <section id="portfolio-overview" class="">
+      <div class="container px-lg-4 px-xl-3">
+        <div class="row justify-content-between mb-4 mb-lg-5">
+          <div class="col-md-8 col-lg-7">
+            <div class="card shadow-2 animated fadeInUp delay-3s">
+              <div class="card-body">
+                  <h2 class="text-secondary mb-3"><span class="text-success display-5 mr-2 font-weight-bold border-bottom-2 border-success">Web</span> Development</h2>
+                <h5>Explore some of my past development projects, gain inspiration and see what's passable. </h5>
+            
+                <ul class="list-group list-group-flush mt-4">
+                  <li class="list-group-item px-0 px-md-3">
+                    <img class="float-left mr-4" src="assets/svg/portfolio_icons/website_icon.svg" height="50px" alt="">
+                    <p><span class="text-secondary h5 mr-2 font-weight-bold">Websites,</span> custom websites developed using technologies such as HTML, CSS, JavaScript. </p>
+                  </li>
+                  <li class="list-group-item px-0 px-md-3">
+                    <img class="float-left mr-4" src="assets/svg/portfolio_icons/app_icon.svg" height="50px" alt="">
+                    <p><span class="text-secondary h5 mr-2 font-weight-bold">Applications,</span> small web-based applications Developed In JavaScript.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-5 col-xl-4">
+            <div class="card shadow-2 shadow-2-hover card-filter animated fadeInUp delay-3s">
+              <div class="card-body">
+                <small class="text-muted">
+                  <i class="fa fa-list-ol mr-2" aria-hidden="true"></i>Project Filter
+                </small>
+                <div id="btnContainer">
+                  <button onclick="filterSelection('all')" id="projectFilterAll" type="button" class="btn btn-sm btn-block btn-outline-primary mt-2 activeButton">All Projects</a></button>
+                  <button onclick="filterSelection('website')" id="projectFilterWebsites" type="button" class="btn btn-sm btn-block btn-outline-primary mt-2">Websites</button>
+                  <button onclick="filterSelection('javascript')" id="projectFilterJS" type="button" class="btn btn-sm btn-block btn-outline-primary mt-2">JavaScript Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- / PORTFOLIO OVERVIEW - SECTION -->
+
+    <!-- Project Listing section -->
+    <div id="projects_section"></div>
+    <section id="projects" class="">
+      <div class="container px-2 px-sm-4 px-lg-3 px-xl-1 animated fadeInUp delay-3s">
+        <!-- List Grid -->
+        <div class="grid pb-4">
+
+          <!-- Lone Calc- javascript - SINGLE PROJECT CARD GROUP -->
+          <div class="grid-sizer col-sm-12 col-md-6 col-lg-4">
+            <!-- ADD CARD TAG IN ID -->
+            <div class="javascript d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+              <!-- CARD START -->
+              <div class="card">
+                <!-- CARD IMAGE -->
+                <div class="card-img-top">
+                  <div class="fad"></div>
+                  <img src="assets/img/project_img/lon_calc_illastration.png" alt="Project Image">
+                  <!-- OVERLAY -->
+                  <div class="smooth">
+                    <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                      <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="lonecalc.sjleachman.com" href="assets/img/project_img/lon_calc_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                      <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2"><a>Dev Video</a></button> -->
+                    </div>
+                  </div>    
+                </div>
+                <!-- CARD BODDY -->
+                <div class="card-body">
+                  <div class="card-title text-primary">
+                    <!-- Project Title -->
+                    <h4>Lone Calc</h4>
+                  </div>
+                  <!-- Project Description -->
+                  <p class="card-text">A lone calculator. Takes in the input, Loan amount, at what percentage, and how many years to repay. Then calculates and outputs the monthly payment, total payment, and the total interest.</p>
+                  <!-- WEBSITE -->
+                  <a href="http://lonecalc.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>lonecalc.sjleachman.com</a>
+                  <!-- TECNOLOGIES -->
+                  <h5 class="mt-4">Technologies:</h5>
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                    <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                    <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                    <li class="list-inline-item"><h6><span target="blank" class="badge badge-pill badge-primary">Bootstrap</span></h6></li>
+                  </ul>
+                  <!-- DATE OF PROJECT -->
+                  <div class="d-flex justify-content-end mt-4">
+                    <small id="date" class="text-muted">Compleated On 8/02/2018</small>
+                  </div>
+                </div>
+                <!-- CARD FOOTER -->
+                <div class="card-footer">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <!-- GETHUB CODE -->
+                      <a class="nav-link" target="blank" data-max-width="1200" href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                    </li>
+                    <li class="nav-item">
+                      <!-- DEMO PROJECT -->
+                      <a class="nav-link" target="blank" href="https://lonecalc.sjleachman.com">Demo Project</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- MANS LUXURIES - website - SINGLE PROJECT CARD GROUP -->
+          <div class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4 ">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/mans_luxuries_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="mansluxuries.com" href="assets/img/project_img/mans_luxuries_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2 d-none"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>Man’s Luxuries</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">A personal project that I've been working on. Man’s Luxuries is an Amazon affiliate, e-comers based site specializing in the sales of men's luxury Fashion accessories.</p>
+                    <!-- WEBSITE -->
+                    <a href="https://mansluxuries.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>mansluxuries.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">Sass</span></h6></li>
+                      <li class="list-inline-item"><a href="https://www.npmjs.com/" target="blank" class="badge badge-secondary">NPM</a></li>
+                    </ul>
+                    <!-- SCRIPTS -->                  
+                    <h5 class="mt-4">Scripts:</h5>
+                    <a href="https://daneden.github.io/animate.css/" target="blank" class="badge badge-secondary">Animate.CSS</a>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 9/1/2018 - Working</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <!-- <a class="nav-link" target="blank" data-max-width="1200" href="https://github.com/globalumbrella/bootstrap-portfoligride" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a> -->
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="https://mansluxuries.com">View Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- SJLEACHMAN_V2 - website - SINGLE PROJECT CARD GROUP -->
+          <div class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4 ">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/sjleachman_v2_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="sjleachman.com" href="assets/img/project_img/sjleachman_v2_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2 d-none"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>sjleachman.com V-2</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">My portfolio website which serves many purposes. The V-2 is for version 2, this is my second portfolio site since I've been developing.</p>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">Sass</span></h6></li>
+                      <li class="list-inline-item"><a href="https://www.npmjs.com/" target="blank" class="badge badge-secondary">NPM</a></li>
+                    </ul>
+                    <!-- SCRIPTS -->                  
+                    <h5 class="mt-4">Scripts:</h5>
+                    <a href="http://ashleydw.github.io/lightbox/" target="blank" class="badge badge-secondary">Bootstrap Lightbox</a>
+                    <a href="https://masonry.desandro.com/" target="blank" class="badge badge-secondary">Masonry.JS</a>
+                    <a href="https://imagesloaded.desandro.com/" target="blank" class="badge badge-secondary">ImagesLoaded</a>
+                    <a href="http://animejs.com/" target="blank" class="badge badge-secondary">Aname.JS</a>
+                    <a href="https://vincentgarreau.com/particles.js/" target="blank" class="badge badge-secondary">Particles.JS</a>
+                    <a href="https://daneden.github.io/animate.css/" target="blank" class="badge badge-secondary">Animate.CSS</a>
+                    <a href="https://formspree.io/" target="blank" class="badge badge-secondary">FormSpree</a>
+                    <a href="http://www.chartjs.org/" target="blank" class="badge badge-secondary">Chart.JS</a>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 7/11/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="https://github.com/globalumbrella/bootstrap-portfoligride" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- TASK LOGGER - javascript - SINGLE PROJECT CARD GROUP -->
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4 ">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="javascript d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/task_logger_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="tasklogger.sjleachman.com" href="assets/img/project_img/task_logger_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>Task Logger</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">A simple app that manages tasks. Add, filter, and delete tasks. There's no database connected rather the tasks will be stored within the user's browsers loco storage.</p>
+                    <!-- WEBSITE -->
+                    <a href="http://tasklogger.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>tasklogger.sjleachman.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><a href="https://materializecss.com/" target="blank" class="badge badge-pill badge-primary">Materialize CSS</a></h6></li>
+                    </ul>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 6/22/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="http://tasklogger.sjleachman.com">Demo Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- --------------------- -->
+
+          <!-- PRO PORTFOLIO - website - SINGLE PROJECT CARD GROUP -->
+          <div class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4 ">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/pro_portfolio_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="proportfolio.sjleachman.com" href="assets/img/project_img/pro_portfolio_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>Pro Portfolio</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">Portfolio resume-based website for Professionals looking to display their project and work history.</p>
+                    <!-- WEBSITE -->
+                    <a href="http://proportfolio.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>proportfolio.sjleachman.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">Sass</span></h6></li>
+                      <li class="list-inline-item"><a href="https://www.npmjs.com/" target="blank" class="badge badge-secondary">NPM</a></li>
+                    </ul>
+                    <!-- SRIPS -->
+                    <h5 class="mt-4">Scripts:</h5>
+                    <a href="http://ashleydw.github.io/lightbox/" target="blank" class="badge badge-secondary">BootStrap LIghtBox</a>
+                    <a href="https://daneden.github.io/animate.css/" target="blank" class="badge badge-secondary">Animate.css</a>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 6/8/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="http://proportfolio.sjleachman.com">Demo Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- TRADING ANALYTICS - website - SINGLE PROJECT CARD GROUP -->
+          <div id="first" class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4 ">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/trading_analytics_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="tradinganalytics.sjleachman.com" href="assets/img/project_img/trading_analytics_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>Trading Analytics</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">Services based website for a company specializing in financial market research and analysis.</p>
+                    <!-- WEBSITE -->
+                    <a href="http://tradinganalytics.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>tradinganalytics.sjleachman.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">Sass</span></h6></li>
+                      <li class="list-inline-item"><a href="https://www.npmjs.com/" target="blank" class="badge badge-secondary">NPM</a></li>
+                    </ul>
+                    <!-- SCRIPTS -->                  
+                    <h5 class="mt-4">Scripts:</h5>
+                    <a href="http://ashleydw.github.io/lightbox/" target="blank" class="badge badge-secondary">Bootstrap Lightbox</a>
+                    <a href="http://kenwheeler.github.io/slick/" target="blank" class="badge badge-secondary">Slick Slider</a>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 6/3/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="http://tradinganalytics.sjleachman.com">Demo Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- PRO BLOGGER - website - SINGLE PROJECT CARD GROUP -->
+          <div id="first" class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4 ">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/pro_blogger_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="problogger.sjleachman.com" href="assets/img/project_img/pro_blogger_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>Pro Blogger - Backend</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">Back-end user interfaces for a blog website. Allows the user to manage their posts.</p>
+                    <!-- WEBSITE -->
+                    <a href="http://problogger.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>problogger.sjleachman.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">Sass</span></h6></li>
+                      <li class="list-inline-item"><a href="https://www.npmjs.com/" target="blank" class="badge badge-secondary">NPM</a></li>
+                    </ul>
+                    <!-- SCRIPTS -->                  
+                    <h5 class="mt-4">Scripts:</h5>
+                    <a href="https://ckeditor.com/" target="blank" class="badge badge-secondary">CK Editor</a>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 5/30/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="http://problogger.sjleachman.com">Demo Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- GLOBAL MARETS - website - SINGLE PROJECT CARD GROUP -->
+          <div id="first" class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4 ">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/global_markets_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="globalmarkets.sjleachman.com" href="assets/img/project_img/global_markets_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>Global Markets</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">Website for a broker and active investment management firm.</p>
+                    <!-- WEBSITE -->
+                    <a href="http://globalmarkets.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>globalmarkets.sjleachman.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">Sass</span></h6></li>
+                      <li class="list-inline-item"><a href="https://www.npmjs.com/" target="blank" class="badge badge-secondary">NPM</a></li>
+                    </ul>
+                    <!-- SCRIPTS -->                  
+                    <h5 class="mt-4">Scripts:</h5>
+                    <a href="http://ashleydw.github.io/lightbox/" target="blank" class="badge badge-secondary">BootStrap LIghtBox</a>
+                    <a href="https://www.chartjs.org/" target="blank" class="badge badge-secondary">Chart.js</a>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 5/25/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="http://globalmarkets.sjleachman.com">Demo Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- THE CHARTIST - website - SINGLE PROJECT CARD GROUP -->
+          <div class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/the_chartist_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="thechartist.sjleachman.com" href="assets/img/project_img/the_chartist_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>The Chartist</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">A website for the sails of an e-book about technical analysis.</p>
+                    <!-- WEBSITE -->
+                    <a href="http://thechartist.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>thechartist.sjleachman.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">Sass</span></h6></li>
+                      <li class="list-inline-item"><a href="https://www.npmjs.com/" target="blank" class="badge badge-secondary">NPM</a></li>
+                    </ul>
+                    <!-- SCRIPTS -->                  
+                    <h5 class="mt-4">Scripts:</h5>
+                    <a href="https://github.com/ts-de/bootstrap4-fixed-navbar" target="blank" class="badge badge-secondary">Simple Navbar Slider</a>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 5/20/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="http://thechartist.sjleachman.com">Demo Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- TRADDERS CONVENTION - website - SINGLE PROJECT CARD GROUP -->
+          <div class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/traders_convention_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                          <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="tradersconvention.sjleachman.com" href="assets/img/project_img/traders_convention_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                          <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>Traders Convention</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">A website for marketing and sales for an upcoming trader’s convention.</p>
+                    <!-- WEBSITE -->
+                    <a href="http://tradersconvention.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>tradersconvention.sjleachman.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">Sass</span></h6></li>
+                      <li class="list-inline-item"><a href="https://www.npmjs.com/" target="blank" class="badge badge-secondary">NPM</a></li>
+                    </ul>
+                    <!-- SCRIPTS -->                  
+                    <h5 class="mt-4">Scripts:</h5>
+                    <a href="https://daneden.github.io/animate.css/" target="blank" class="badge badge-secondary">Animate.css</a>
+                    <a href="https://github.com/ts-de/bootstrap4-fixed-navbar" target="blank" class="badge badge-secondary">Simple Navbar Slider</a>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 5/3/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="http://tradersconvention.sjleachman.com">Demo Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+          <!-- SJLEACHMAN_V1 - SINGLE PROJECT CARD GROUP -->
+          <div class="">
+            <div class="grid-sizer col-sm-12 col-md-6 col-lg-4">
+              <!-- ADD CARD TAG IN ID -->
+              <div class="website d-none filterCard grid-item-content col-sm-12 col-md-6 col-lg-4">
+                <!-- CARD START -->
+                <div class="card">
+                  <!-- CARD IMAGE -->
+                  <div class="card-img-top">
+                    <div class="fad"></div>
+                    <img src="assets/img/project_img/sjleachman_v1_respansive_illastration.png" alt="Project Image">
+                    <!-- OVERLAY -->
+                    <div class="smooth">
+                      <div class="row d-flex justify-content-center align-items-center flex-column flex-nowrap">
+                        <button type="button" data-toggle="lightbox" data-max-width="1200" data-title="v1.sjleachman.com" href="assets/img/project_img/sjleachman_v1_respansive_illastration.png" class="btn btn1 btn-outline-light mt-2 animated fadeIn"><a>View Screenshots</a></button>
+                        <!-- <button type="button" href="#" class="btn btn2 btn-outline-light mt-2 d-none"><a>Dev Video</a></button> -->
+                      </div>
+                    </div>    
+                  </div>
+                  <!-- CARD BODDY -->
+                  <div class="card-body">
+                    <div class="card-title text-primary">
+                      <!-- Project Title -->
+                      <h4>SJLeachman.com V1</h4>
+                    </div>
+                    <!-- Project Description -->
+                    <p class="card-text">My first development project and website to display my portfolio.</p>
+                    <!-- WEBSITE -->
+                    <a href="http://tradersconvention.sjleachman.com" target="blank" class="btn btn-link p-0"><i class="fa fa-globe mr-2" aria-hidden="true"></i>v1.sjleachman.com</a>
+                    <!-- TECNOLOGIES -->
+                    <h5 class="mt-4">Technologies:</h5>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">HTML</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">CSS</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">JavaScript</span></h6></li>
+                      <li class="list-inline-item"><h6><span class="badge badge-pill badge-primary">BootStrap</span></h6></li>
+                    </ul>
+                    <!-- DATE OF PROJECT -->
+                    <div class="d-flex justify-content-end mt-4">
+                      <small id="date" class="text-muted">Compleated On 3/31/2018</small>
+                    </div>
+                  </div>
+                  <!-- CARD FOOTER -->
+                  <div class="card-footer">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <!-- GETHUB CODE -->
+                          <a class="nav-link" target="blank" data-max-width="1200" href="https://github.com/globalumbrella/website-sjleachman-v1" target="blank"><i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+                        </li>
+                        <li class="nav-item">
+                          <!-- DEMO PROJECT -->
+                          <a class="nav-link" target="blank" href="projects/sjleachman_v1/website_sjl_v1.html">Demo Project</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+
+        </div> <!-- / List Grid -->
+      </div> 
+    </section> <!-- / Project Listing section -->
+
+
+  </div> <!-- / Wrapper -->
+
+  <!-- MAIN FOOTER - FOOTER -->
+  <footer id="main-footer" class="footer bg-dark">
+    <div class="container">
+      <div class="row pt-3 pt-md-5 d-flex justify-content-between">
+        <div class="col-12 col-md-5 col-lg-4 order-2 order-md-1">
+          <h5 class="text-light">Website Content</h5>
+          <ul class="nav flex-column ">
+            <li>
+              <a class="btn btn-link" href="index.html">About</a>
+            </li>
+            <li>
+              <a class="btn btn-link" href="services.html">Services</a>
+            </li>
+            <li>
+              <a class="btn btn-link" href="personal_projects.html">Personal Projects</a>
+            </li>
+            <li>
+              <a class="btn btn-link disabled" href="dev_projects.html">Development Projects</a>
+            </li>
+            <li>
+              <a class="btn btn-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 ">
+          <div class="d-flex justify-content-center mb-3 mt-4 mt-md-0">
+            <img src="assets/svg/logo_manogram.svg" height="30px" alt="">
+          </div>
+          <p class="text-center mb-5 text-light">UX/UI Design | Web Development | Trading/Investing</p>
+          <h5 class="text-light">Some Info</h5>
+          <ul class="nav flex-column mb-0 mb-md-4 mb-lg-0">
+            <li>
+              <a class="btn btn-link disabled" href="faqs.html">FAQ's</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 order-1 order-mb-2">
+          <h5 class="text-light">Connect On Social Media</h5>
+          <ul class="nav flex-column mt-2">
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fa fa-linkedin fa-1" aria-hidden="true"></i></i>LinkedIn</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://twitter.com/sjleachman/" target="blank"><i class="fa fa-twitter fa-2" aria-hidden="true"></i>twitter</a>
+            </li>
+
+            <li class="nav-item"><a class="btn btn-link" href="https://plus.google.com/110990843868980982964" target="blank"><i class="fa fa-google-plus fa-3"   aria-hidden="true"></i>Google Plus</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://github.com/sjleachman/" target="blank"><i class="fa fa-github fa-4" aria-hidden="true"></i>Github</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fa fa-youtube-play fa-5" aria-hidden="true"></i>YouTube</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.instagram.com/sjleachman/" target="blank"><i class="fa fa-instagram fa-6" aria-hidden="true"></i>Instagram</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.pinterest.com/sjleachman/" target="blank"><i class="fa fa-pinterest-p fa-7" aria-hidden="true"></i>Pinterest</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.facebook.com/pg/Stephen-Leachman-319945145221895/" target="blank"><i class="fa fa-facebook-official fa-8" aria-hidden="true"></i>Facebook</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 mt-4 pb-2 order-4">
+          <p class="small text-center">&COPY;2018 sjleachman.com All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer> <!-- / MAIN FOOTER - FOOTER -->
+
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/anime.min.js"></script>
+  <!--  -->
+  <script src="js/animations.js"></script>
+  <script src="js/navbar-fixed.js"></script>
+  <script src="js/ekko-lightbox.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+
+  <!-- <script src="js/Chart.bundle.min.js"></script>
+  <script src="js/charts.js"></script> -->
+  
+  <script src="js/main.js"></script>
+  <!--  -->
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/grid.js"></script>
+  
+  <script>
+    // Mimic Server Req
+    setTimeout(() => {
+        document.querySelector('.loader').classList.remove('spinner-1');
+        document.querySelector('.loader').style.display = 'none';
+    }, 3000);
+  </script>
+  
+
+</body>
+</html>

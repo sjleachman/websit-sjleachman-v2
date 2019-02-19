@@ -1,0 +1,75 @@
+// Global Color Theme
+.bg-theme1{
+  background-color: #06858C;
+}
+.bg-theme2{
+  background-color: #45C48B;
+}
+.bg-theme3{
+  background-color: #FFD039;
+}
+.bg-theme4{
+  background-color: #F47942;
+}
+.bg-theme-dark{
+  background-color: #323741;
+}
+
+// Global setting
+.card {
+  border-radius: 0;
+  border: 0;
+}
+
+// Background
+.background{
+  position: absolute;
+  width: 100%;
+  height: 450px;
+  background-color: #06858C; 
+  z-index: -1;
+}
+
+// Main Header
+#main-header{
+  img{
+    width: 100%;
+    height: 100%
+  }
+  #socialMediaGroup{
+    .fa{
+      font-size: 1.3em;
+      margin-right: 20px;
+    }
+  }
+  .port-item{
+    width: 30%;
+    .fa{
+      font-size: 2em;
+    }
+  }
+
+  .port-item:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+// Resume section
+#resume {
+  .card-deck .card{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  .card-deck .card:hover{
+    box-shadow: none;
+    transition: ease-in-out 500ms;
+  }
+}
+
+  
+@media(min-width:1199px){
+  .port-item{
+    padding:3em !important;
+  }
+}
+  

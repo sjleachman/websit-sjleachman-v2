@@ -1,0 +1,200 @@
+$primary: #FF530D;
+$light: #EFEFEF;
+$dark: #3F5765;
+$icon-size:55px;
+$dark-overlay:rgba(63, 87, 101, 0.87);
+
+body{
+  overflow-x: hidden;
+}
+
+.navbar{
+  .navbar-brand .fa{
+    font-size: 22PX;
+  }
+  .nav-link{
+    font-size:14px;
+    text-transform: uppercase;
+    padding-left:1em !important;
+    padding-right: 1em !important;
+  }
+
+  .nav-item.active{
+    border-left: $primary 3px solid;
+  }
+}
+#showcase{
+  margin-top: 50px;
+}
+.carousel-indicators{
+  z-index: 9;
+  .active{
+    background: $primary;
+  }
+}
+.carousel-control-group {
+  a{
+    z-index: 9;
+    span{
+      background: $primary;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      i{
+        font-size: 2em;
+        margin-top: 8px;
+        color: $light;
+      }
+    }
+  }
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $dark;
+  z-index: 1;
+  opacity: .8;
+}
+
+.carousel-inner{
+
+  .carousel-item{
+    height: 680px;
+    .container{
+      .carousel-caption{
+        height: 70%;
+      }
+    }
+  }
+
+  .carousel-img-1{
+    background:url('../img/image3.jpg');
+    background-size: cover;
+    z-index: 0;
+  }
+  
+  .carousel-img-2{
+    background:url('../img/image1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  
+  .carousel-img-3{
+    background:url('../img/image2.jpg');
+    background-size: cover;
+    z-index: 0;
+  }
+}
+
+
+.fa{
+  font-size:$icon-size;
+}
+
+#home-heading{
+  position: relative;
+  min-height: 200px;
+  background: url('../img/trading.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: $light;
+}
+
+.dark-overlay{
+  position: absolute;
+  background-color: $dark-overlay;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#video-play{
+  position: relative;
+  min-height: 200px;
+  background: url('../img/trading.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  //background-position: 0 -300px;
+  text-align: center;
+  color: #fff;
+  a{
+    color:#fff;
+  }
+}
+#videoModal .modal-content{
+  .modal-body{
+    max-width: 650px;
+    height: 400px;
+    button{
+      margin-top: -20px;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+  }
+}
+footer#main-footer{
+  background: $primary;
+  color: $light;
+}
+
+#page-header{
+  height: 300px;
+  background: url('../img/image1.jpg');
+  background-position: -640px 460px;
+  background-attachment: fixed;
+  position: relative;
+  color: #fff;
+  border-bottom:1px #eee solid;
+  padding-top: 50px;
+  .container{
+    height: 100%;
+  }
+}
+
+#Analysis{
+  h4{
+    color: $primary;
+  }
+  img{
+    border-bottom: 1px solid $dark;
+  }
+}
+
+#faq{
+
+  .card{
+    border:$light;
+    border-radius: 0;
+    a{
+      color:$dark;
+      text-decoration: none;
+    }
+  }
+
+  .card-body, .card-header{
+    background: $light;
+    p{
+      color: #444;
+    }
+  }
+}
+
+@media (max-width: 768px) { 
+  .display-3{
+    font-size: 2.8em;
+  }
+  .carousel-inner{
+    .carousel-item{
+      // height: 680px;
+      .container{
+        .carousel-caption{
+          height: 80%;
+        }
+      }
+    }
+  }
+}

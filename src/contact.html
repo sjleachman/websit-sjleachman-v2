@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>SJLeachman | Contact Me</title>
-  <!-- FAVICON IMG -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124413853-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124413853-1');
+  </script>
+
+  <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Links -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+
+  <!-- FAVICON Img Links -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+  <!-- Scrips - Top -->
+  <script src="js/Chart.bundle.min.js"></script>
+
+  <!-- Google Search Mata Tags -->
+  <meta name="p:domain_verify" content="d773b0b97ac17326cfa969ad43e725d9"/>
+  <meta name="google-site-verification" content="UmdyFW7_mVnUc4KabiKbySVDcsNHuYwCmQjtW9SDc_s"/>
+
+  <!-- Title -->
+  <title>SJLeachman | Contact</title>
+
 </head>
 
 <body id="contact">
-   
+  
   <!-- Main Navagation -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a href="index.html" class="navbar-brand"><img src="assets/svg/logo_manogram.svg" height="30-px" alt="Manogram"></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">
-                <i class="fa fa-user-o pr-1" aria-hidden="true"></i> About
-              </a>
-            </li>
-            <li class="nav-item pl-3">
-              <a href="services.html" class="nav-link">
-                <i class="fa fa-cogs pr-1" aria-hidden="true"></i> Need Me?
-              </a>
-            </li>
-            <li class="nav-item pl-3">
-              <a href="portfolio.html" class="nav-link">
-                  <i class="fa fa-book pr-1" aria-hidden="true"></i> Portfolio
-              </a>
-            </li>
-            <li class="nav-item pl-3">
-              <a href="contact.html" class="nav-link active">
-                  <i class="fa fa-address-card-o pr-1" aria-hidden="true"></i> Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+      <a href="index.html" class="navbar-brand"><img src="assets/svg/logo_manogram.svg" height="25px" alt="Manogram"></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="fa fa-user-o pr-1" aria-hidden="true"></i> About
+            </a>
+          </li>
+          <li class="nav-item pl-3">
+            <a href="services.html" class="nav-link">
+              <i class="fa fa-cogs pr-1" aria-hidden="true"></i> Services
+            </a>
+          </li>
+          <li class="dropdown nav-item pl-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-book pr-1" aria-hidden="true"></i> Portfolio
+            </a>
+            <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="personal_projects.html">Personal Projects</a>
+              <a class="dropdown-item" href="dev_projects.html">Development Projects</a>
+            </div>
+          </li>
+          <li class="nav-item pl-3">
+            <a id="contact" href="contact.html" class="nav-link active">
+              <i class="fa fa-address-card-o pr-1" aria-hidden="true"></i> Contact
+            </a>  
+          </li>
+        </ul>
+      </div>
     </div>
-  </nav>
- 
+  </nav>  <!-- / Main Navagation -->
 
   <!-- CONTACT PAGE -->
   <div id="background">
-    <div id="particles-js"></div>
-    
+      
     <!-- ALLERT MESSAGE CHECK INPUTS DANGER -->
     <div id="msgDanger" class="alert alert-danger alert-dismissible fade" role="alert">
       <div class="container">
@@ -75,64 +102,78 @@
         </button>
       </div>
     </div>
-
-    <div class="container" style="height: 100%;">
-      <div class="row align-items-center" style="height: 100%;">
-        <div class="col">
-          <div class="form mx3" style="max-width: 900px;">
-            <div class="row justify-content-center">
+  
+    <div class="container pt-4 px-0 px-md-4" style="height: 100%;">
+      <div class="row justify-content-center align-items-center" style="height: 100%;">
+        <div class="col-12 col-md-12 col-lg-10 col-xl-9">
+          <div class="form mx-3">
+            <div class="row justify-content-center mt-5">
               <div class="col-md-4 text-light form-head">
                 <div class="d-flex justify-content-center mt-4 mb-3">
                   <img class="rounded-circle" src="assets/img/avatar.png" alt="Avitar Image" height="100px">
                 </div>
                 <div class="d-flex justify-content-center">
-                  <h5 class="mb-5">Stephen Leachman</h5>
+                  <h5 class="mb-5 text-light">Stephen Leachman</h5>
                 </div>
                 <div class="contact-info">
                   <h6><i class="fa fa-map-marker mr-2" aria-hidden="true"></i> Orlando Florida</h6>  
+                  <h6><i class="fa fa-map-marker mr-2" aria-hidden="true"></i> Esteli Nicaragua</h6>  
                   <h6><i class="fa fa-envelope-o mr-2" aria-hidden="true"></i> stephen@sjleachman.com</h6>
                 </div>
-
+  
                 <div class="d-flex justify-content-center">
                 <ul class="nav mt-2">
-                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fa fa-linkedin" aria-hidden="true"></i></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/LeachmanCapital?lang=en" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://plus.google.com/110990843868980982964" target="blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/globalumbrella" target="blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>        </a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                  </ul>
-                </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fa fa-linkedin" aria-hidden="true"></i></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/sjleachman/" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://plus.google.com/110990843868980982964" target="blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/sjleachman/" target="blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/sjleachman/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.pinterest.com/sjleachman/" target="blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                  </li>
+                </ul>
               </div>
-              <div class="col-md-7 bg-light form-body">
-              <div class="card-body">
-                <form id="contactForm" action="https://formspree.io/globalumbrella16@gmail.com" method="POST">
-                  <div class="form-group">
-                    <label for="inputName">Name</label>
-                    <input name="name" type="name" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter Name">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail">Email</label>
-                    <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputSubject">Subject</label>
-                    <select name="subject" class="form-control" id="inputSubject">
-                      <option>I need a website</option>
-                      <option>I need some graphics design work done</option>
-                      <option>I need a web app</option>
-                      <option>I have an investment related question</option>
-                      <option>Just to chat</option>
-                      
-                    </select>
+            </div>
+            <div class="col-md-7 bg-light form-body">
+            <div class="card-body">
+              <form id="contactForm" action="https://formspree.io/globalumbrella19@gmail.com" method="POST">
+                <div class="form-group">
+                  <label for="inputName">Name</label>
+                  <input name="name" type="name" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail">Email</label>
+                  <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                  <label for="inputSubject">Subject</label>
+                  <select name="subject" class="form-control" id="inputSubject">
+                    <option>I need a website</option>
+                    <option>I need some graphics design work done</option>
+                    <option>I need a web app</option>
+                    <option>I have an investment related question</option>
+                    <option>Just to chat</option>
+                  </select>
                   </div>
                   <div class="form-group">
                     <label for="inputMessage">Message</label>
                     <textarea name="message" class="form-control" id="inputMessage" rows="3"></textarea>
                   </div>
                   <input type="hidden" name="_next" value="contact.html" />
-                 
+                  
                   <button id="submit" type="submit" class="btn btn-block btn-primary">Submit</button>
                 </form>
               </div>
@@ -144,22 +185,18 @@
   </div>
 
 
-  
+ 
 
+  
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/ekko-lightbox.min.js"></script>
-  <!-- <script src="js/masonry.pkgd.min.js"></script> -->
-  <script src="js/particles.js"></script>
   <script src="js/anime.min.js"></script>
   <script src="js/animations.js"></script>
-  <!-- <script src="js/imagesloaded.pkgd.min.js"></script> -->
+  <!-- <script src="js/navbar-fixed.js"></script>
+  <script src="js/Chart.bundle.min.js"></script>
+  <script src="js/charts.js"></script> -->
   <script src="js/main.js"></script>
-  <script>
-    setTimeout(function(){
-    particlesJS.load('particles-js', 'assets/particles.json')
-    }, 1000);
-  </script>
+
 </body>
-</html> 
+</html>

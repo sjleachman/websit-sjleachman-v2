@@ -1,0 +1,60 @@
+.bg-theme1 {
+  background: #1EB450; }
+
+.bg-theme2 {
+  background: #282828e3; }
+
+.text-theme1 {
+  color: lightgray; }
+
+body {
+  background: #282828;
+  color: lightgray; }
+
+.navebar-color-toggle {
+  background: #1EB450; }
+
+#home-section {
+  height: 100vh; }
+  #home-section .full-scrn-video-wrap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+    #home-section .full-scrn-video-wrap video {
+      min-width: 100%;
+      min-height: 100%; }
+  #home-section .dark-overlay {
+    background-color: #282828e3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; }
+  #home-section .home-inner .row {
+    height: 100vh; }
+  #home-section .fa {
+    color: #1EB450;
+    background: #fff;
+    padding-left: 4px;
+    border-radius: 5px;
+    font-size: 30px; }
+
+#explore-section .fa, #portfolio-section .fa {
+  color: #fff;
+  background: #1EB450;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 30px; }
+
+#how-it-works-section img {
+  max-width: 100%; }
+
+#how-it-works-section .fa {
+  color: #1EB450;
+  background: #fff;
+  padding-left: 4px;
+  border-radius: 5px;
+  font-size: 30px; }

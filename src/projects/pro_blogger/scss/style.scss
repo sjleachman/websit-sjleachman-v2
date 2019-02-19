@@ -1,0 +1,64 @@
+$dark-2: #3F5765;
+$dark: #2B3A42;
+$light: #BDD4DE;
+$light-2: #F0F0F0;
+
+.bg-dark-2{
+    background: $dark-2;
+}
+.bg-light-2{
+    background: $light-2;
+}
+
+.card{
+    .card-header{
+        border-bottom: none;
+    }
+    background: $dark;
+}
+.modal-content{
+    border: none;
+}
+.pagination{
+    li{
+        a {
+            background: $dark-2; 
+            border: none;
+            color: $light;
+        }
+    }
+    .disabled {
+        background: $dark;
+    }
+}
+
+.table-dark {
+    // color: $table-dark-color;
+    background-color: $dark;
+    
+    th,
+    td,
+    thead th {
+      border-color: $dark;
+    }
+}
+
+.navbar{
+    min-height: 60px;
+    .dropdown-menu {
+        background: $dark;
+        border: none;
+        a {
+            color: #F0F0F0;
+        }
+        a:hover{
+            background: $dark-2;
+        }
+    }
+}
+.main-header{
+    padding-top: 60px;
+}
+.wrapper {
+    min-height: calc(100vh - 126px);
+}

@@ -1,239 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>SJLeachman | My Services</title>
-  <!-- FAVICON IMG -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124413853-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124413853-1');
+  </script>
+
+  <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Links -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+
+  <!-- FAVICON Img Links -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+  <!-- Scrips - Top -->
+  <script src="js/Chart.bundle.min.js"></script>
+
+  <!-- Google Search Mata Tags -->
+  <meta name="p:domain_verify" content="d773b0b97ac17326cfa969ad43e725d9"/>
+  <meta name="google-site-verification" content="UmdyFW7_mVnUc4KabiKbySVDcsNHuYwCmQjtW9SDc_s"/>
+
+  <!-- Title -->
+  <title>SJLeachman | My Services</title>
+
 </head>
 
 <body id="services">
-
+    
   <!-- Main Navagation -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a href="index.html" class="navbar-brand"><img src="assets/svg/logo_manogram.svg" height="30-px" alt="Manogram"></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">
-                <i class="fa fa-user-o pr-1" aria-hidden="true"></i> About
-              </a>
-            </li>
-            <li class="nav-item pl-3">
-              <a href="services.html" class="nav-link active">
-                <i class="fa fa-cogs pr-1" aria-hidden="true"></i> Need Me?
-              </a>
-            </li>
-            <li class="nav-item pl-3">
-              <a href="portfolio.html" class="nav-link">
-                  <i class="fa fa-book pr-1" aria-hidden="true"></i> Portfolio
-              </a>
-            </li>
-            <li class="nav-item pl-3">
-              <a id="contact" href="contact.html" class="nav-link">
-                  <i class="fa fa-address-card-o pr-1" aria-hidden="true"></i> Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+      <a href="index.html" class="navbar-brand"><img src="assets/svg/logo_manogram.svg" height="25px" alt="Manogram"></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="fa fa-user-o pr-1" aria-hidden="true"></i> About
+            </a>
+          </li>
+          <li class="nav-item pl-3">
+            <a href="services.html" class="nav-link active">
+              <i class="fa fa-cogs pr-1" aria-hidden="true"></i> Services
+            </a>
+          </li>
+          <li class="dropdown nav-item pl-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-book pr-1" aria-hidden="true"></i> Portfolio
+            </a>
+            <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="personal_projects.html">Personal Projects</a>
+              <a class="dropdown-item" href="dev_projects.html">Development Projects</a>
+            </div>
+          </li>
+          <li class="nav-item pl-3">
+            <a id="contact" href="contact.html" class="nav-link">
+              <i class="fa fa-address-card-o pr-1" aria-hidden="true"></i> Contact
+            </a>  
+          </li>
+        </ul>
+      </div>
     </div>
-  </nav>
+  </nav>  <!-- / Main Navagation -->
 
   <!-- SERVICES OVERVIEW - SECTION -->
-  <section id="services-overview" class="pt-md-5">
-    <div class="container">
-      <div class="row justify-content-center pt-5">
-        <div class="col-md-6">
-          <div class="text-center text-light">
-            <h2 class="mt-4">What Can I Do For You?</h2>
-            <p class="mt-4">Do you need some Graphics design work done or better yet a professionally designed and developed website for yourself or business? Let Me know, I really look forward in working with you on your next big idea.</p>
-          </div>
-        </div>
-      </div>
+  <header class="pt-5">
+    <h1 class="heading-main text-center mt-5 animated fadeInDown">Services</h1>
+    <div class="d-flex justify-content-center">
+      <a href="contact.html" class="btn btn-secondary btn-lg shadow-2 shadow-2-hover animated fadeInUp" role="button" aria-pressed="true">Get Started!</a>
     </div>
-  </section>
+  </header>
 
   <!-- DESIGN SERVICES - SECTION -->
-  <section id="design-services">
-    <div class="container">
-      <div class="row justify-content-between mt-5">
-
-          <div class="col-md-4 order-sm-1 order-md-2 order-lg-1">
-            <div class="d-flex justify-content-center mb-md-5">
-              <img id="computer" src="assets/svg/design_computer_icon.svg" height="200px" alt="Design Icon">
+  <section id="design-heading">
+    <div id="row-padding" class="container">
+      <div class="row d-flex justify-content-between row-margin">
+        <div class="col-md-12">
+          <div class="card shadow-2 animated fadeInUp">
+            <div class="card-body">
+              <!-- <h2 class="text-secondary text-center">What Can I Do For You?</h2> -->
+              <!-- <h5 class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, eaque.</h5> -->
+              <div class="container px-0 px-xl-4">
+                <div class="row justify-content-around">
+                  <div class="col-12 col-md-6 col-xl-5">
+                    <div class="list-group list-group-flush">
+                      <a id="slide" href="#design_section" class="list-group-item list-group-item-action px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/ux_icon.svg" height="70px" alt="ux icon">  
+                        <p class="mt-sm-2"><span class="text-secondary h5 mr-2 font-weight-bold">UX Design.</span>User reach, Analyzing trends, preparation, and Wireframing.</p>
+                      </a>
+                      <a id="slide" href="#design_section" class="list-group-item list-group-item-action px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/ui_icon.svg" height="70px" alt="ui icon"> 
+                        <p class="mt-sm-2"><span class="text-secondary h5 mr-2 font-weight-bold">UI Design.</span>100% Custom design for your new website or application.</p>
+                      </a>
+                      <a id="slide" href="#dev_section" class="list-group-item list-group-item-action px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/wordpress_icon.svg" height="70px" alt="wordPress icon">
+                        <p class="mt-sm-2"><span class="text-secondary h5 mr-2 font-weight-bold">WordPress.</span>e-comers, blog templates to a full custom WordPress theme.</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-5">
+                    <div id="remove-border-top" class="list-group list-group-flush">
+                      <a id="slide" href="#dev_section" class="list-group-item list-group-item-action px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/theme_icon.svg" height="70px" alt="theme icon">
+                        <p class="mt-sm-2"><span class="text-secondary h5 mr-2 font-weight-bold">Themes.</span>Template based websites developed with Bootstrap or Materialize CSS.</p>
+                      </a>
+                      <a id="slide" href="#dev_section" class="list-group-item list-group-item-action  px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/custom_icon.svg" height="70px" alt="custom icon">
+                        <p class="mt-md-2"><span class="text-secondary h5 mr-2 font-weight-bold">Custom.</span>Make It yours with the only limitation being your imagination.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-        <div class="col-md-7 order-sm-2 order-md-1 order-lg-2">
-          <h2 class="text-primary">Graphics Design</h2>
-          <p>Graphics Design is about relaying a message through a graphical image rather than the use of words. My focus when designing graphics for clients has always been finding Unique ways to express a client's business modal, service or product with the use of a graphical image.</p>
-          <div class="d-sm-flex flex-row align-items-center mt-4 ">
-            <h3 class="text-primary"><span class="text-success">$30.00 - </span>Per Houre.</h3>
-            <a href="contact.html"><button type="button" class="btn ml-sm-4 btn-outline-primary mt-2">Contact For Estimate</button></a>
+        </div>
+        <div class="col-12 mt-4 mt-md-5 pt-lg-3">
+          <div class="card shadow-2 animated fadeInUp delay-1s">
+            <div class="card-body">
+              <h2 class="mt-3 mt-md-0 text-secondary text-center">How It <span class="text-success display-5 mr-2 font-weight-bold border-bottom-2 border-success">Works</h2>
+              <!-- <h5 class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, eaque.</h5> -->
+              <div class="container px-0 px-xl-4">
+                <div class="row justify-content-around">
+                  <div class="col-12 col-md-6 col-xl-5">
+                    <div class="list-group list-group-flush">
+                      <a href="#" class="list-group-item list-group-item-action px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/form_icon.svg" height="70px" alt="form icon">
+                        <p class="mt-sm-2"><span class="text-secondary h5 mr-2 font-weight-bold">Project Scope.</span>Contact and complete a detailed form explaining your project.</p>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action  px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/payment_icon.svg" height="70px" alt="payment icon">
+                        <p class="mt-sm-2"><span class="text-secondary h5 mr-2 font-weight-bold">Payment.</span>Easy, convenient and secure payment methods are available.</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-5">
+                    <div class="list-group list-group-flush">
+                      <a href="#" class="list-group-item list-group-item-action  px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/corraspond_icon.svg" height="70px" alt="network icon">
+                        <p class="mt-sm-2"><span class="text-secondary h5 mr-2 font-weight-bold">Correspondence.</span>Be with me every step throughout your project.</p>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action  px-0 px-md-4">
+                        <img class="mr-3 float-left" src="assets/svg/servicesIcons/zip_icon.svg" height="70px" alt="zip file icon">
+                        <p class="mt-sm-2"><span class="text-secondary h5 mr-2 font-weight-bold">Upon Completion.</span>Receive folder containing all your project files.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div  id="check-group-1" class="row justify-content-between mt-3">
-        <!-- col 1 -->
-        <div class="col-lg-4 col-md-5">
-          <div class="float-left">
-            <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-          </div>
-          <h4 class="mb-4">Website Design.</h4>
-          <div class="float-left">
-            <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-          </div>
-          <h4 class="mb-4">SVG Graphics.</h4>
-          <div class="float-left">
-            <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-          </div>
-            <h4 class="mb-4">User Interfaces.</h4>
-        </div>
-        <!-- col 2 -->
-        <div class="col-lg-4 col-md-5">
-          <div class="float-left">
-            <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-          </div>
-          <h4 class="mb-4">App Design.</h4>
-          <div class="float-left">
-            <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-          </div>
-          <h4 class="mb-4">Social Media Themes.</h4>
-          <div class="float-left">
-            <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-          </div>
-            <h4 class="mb-4">Logo Design.</h4>
-        </div>
-        <!-- col 3 -->
-        <div class="col-lg-4 col-md-5">
-          <div class="float-left">
-            <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-          </div>
-          <h4 class="mb-4">Business Card Design.</h4>
-          <div class="float-left">
-            <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-          </div>
-          <h4 class="mb-4">Flyers & Brochures.</h4>
-       
-        <div class="float-left">
-          <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-        </div>
-        <h4 class="mb-4">Have Another Idea?</h4>
-      </div>
       </div>
     </div>
+    <div id="design_section"></div>
+  </section> <!-- / DESIGN SERVICES - SECTION -->
+
+  <!-- UI Design Section -->
+  <section id="ui_design">
+    <div class="container pt-5">
+      <div class="row justify-content-center" id="design_icon">
+        <a id="slide" href="#design_section">
+          <img class="design-icon rounded-circle" height="120px" src="assets/svg/design_icon_2.svg" alt="Design Icon">
+        </a>
+      </div>
+      <div class="row justify-content-center">
+        <h1 class="text-light mt-2 mt-xl-4 mb-4 mb-md-5"><span class="text-warning display-5 mr-2 font-weight-bold border-bottom-2 border-warning">UI/UX</span> Design</h1>
+      </div>
+      <div id="row-padding" class="row justify-content-center justify-content-xl-between">
+        <!-- Computer Col -->
+        <div class="col-11 col-sm-9 col-md-6 col-xl-5">
+          <div id="video_group" class="d-flex justify-content-center">
+            <img id="computer" src="assets/svg/design_computer_icon.svg" height="250px" alt="Design Icon">
+            <a href="#"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a>
+          </div>
+        </div> <!-- / Computer Col -->
+        <!-- UI Services List -->
+        <div class="col-12 col-lg-10 col-xl-7">
+          <div class="card shadow-2 mt-4 mt-xl-0">
+            <!-- Heading List -->
+            <div class="card-header p-0">
+              <ul class="nav flex-column flex-md-row nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="true"> Explore
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-website-design-tab" data-toggle="pill" href="#pills-website-design" role="tab" aria-controls="pills-website-design" aria-selected="false">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i> UX Design
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-ui-design-tab" data-toggle="pill" href="#pills-ui-design" role="tab" aria-controls="pills-ui-design" aria-selected="false">
+                    <i class="fa fa-object-group" aria-hidden="true"></i> UI Design
+                  </a>
+                </li>
+              </ul>
+            </div> <!-- / Heading List -->
+            <!-- Card Body Content -->
+            <div class="card-body">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
+
+                </div>
+                <div class="tab-pane fade" id="pills-website-design" role="tabpanel" aria-labelledby="pills-website-design-tab">
+
+                </div>
+                <div class="tab-pane fade" id="pills-ui-design" role="tabpanel" aria-labelledby="pills-ui-design-tab">
+
+                </div>
+            </div> <!-- / Card Body Content -->
+          </div> <!-- / UI Services List -->
+        </div>
+      </div>
+    </div>
+    <div id="dev_section"></div>
+  </section> <!-- / UI Design Section -->
+
+  <!-- CODING SERVICES - SECTION -->
+  <section id="web_develupment">
+    <div class="container">
+
+      <div class="row justify-content-center" id="design_icon">
+        <a id="slide" href="#dev_section">
+          <img class="design-icon rounded-circle" height="120px" src="assets/svg/coding_icon_2.svg" alt="Coding Icon">
+        </a> 
+      </div>
+      <div class="row justify-content-center">
+        <h1 class="text-primary mt-2 mt-xl-4 mb-4 mb-md-5"><span class="text-success display-5 mr-2 font-weight-bold border-bottom-2 border-success">Web</span> Development</h1>
+      </div>
+
+      <div id="row-padding" class="row justify-content-center justify-content-xl-between">
+        <div class="col-11 col-sm-9 col-md-6 col-xl-5">
+          <div id="video_group"  class="d-flex justify-content-center">
+            <img id="computer" src="assets/svg/coding_computer_icon.svg" height="250px" alt="Design Icon">
+            <a href="#"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      
+        <!--  -->
+        <div class="col-12 col-lg-10 col-xl-7">
+          <div class="card shadow-2 mt-4 mt-xl-0">
+            <div class="card-header p-0">
+              <!-- Development Services List -->
+              <ul class="nav nav-pills flex-column flex-md-row mb-3" id="pills-tab" role="tablist"> 
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-dev-overview-tab" data-toggle="pill" href="#pills-dev-overview" role="tab" aria-controls="pills-dev-overview" aria-selected="true"> Explore
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-wordpress-tab" data-toggle="pill" href="#pills-wordpress" role="tab" aria-controls="pills-wordpress" aria-selected="false">
+                    <i class="fa fa-wordpress" aria-hidden="true"></i> WordPress
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-wordpress-tab" data-toggle="pill" href="#pills-wordpress" role="tab" aria-controls="pills-wordpress" aria-selected="false">
+                    <i class="fa fa-files-o" aria-hidden="true"></i> Themes 
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-custom-tab" data-toggle="pill" href="#pills-Custom" role="tab" aria-controls="pills-Custom" aria-selected="false">
+                    <i class="fa fa-file-code-o" aria-hidden="true"></i> Custom 
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card-body">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-dev-overview" role="tabpanel" aria-labelledby="pills-dev-overview-tab">
+         
+                </div>
+                <div class="tab-pane fade" id="pills-wordpress" role="tabpanel" aria-labelledby="pills-wordpress-tab">
+                
+                </div>
+                <div class="tab-pane fade" id="pills-Custom" role="tabpanel" aria-labelledby="pills-Custom-tab">
+               
+                </div>
+              </div> <!-- / Development Services List -->
+
+            </div>
+          </div>
+        </div>         
+      </div>
+    </div>
+    <div id="other_sevices_section"></div>
+  </section> <!-- / CODING SERVICES - SECTION -->
+
+  <!-- Other Services Section -->
+  <section id="otherServices">
+    <div class="container">
+      <div class="row justify-content-center" id="design_icon">
+        <a id="slide" href="#other_sevices_section">
+          <img class="other-services-icon rounded-circle" height="120px" src="assets/svg/Other_services_icon.svg" alt="Coding Icon">
+        </a> 
+      </div>
+      <div class="row justify-content-center">
+        <h1 class="text-light mt-2 mt-xl-4 mb-5 mb-md-5"><span class="text-warning display-5 mr-2 font-weight-bold border-bottom-2 border-warning">Other</span> Services</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-4">
+          <div class="card shadow-2 shadow-2-hover">
+            <div class="card-header">
+              <h3 class="text-secondary">Server Stuff</h3>
+            </div>
+            <div class="card-body">
+              <p>Manage redirects, Domain name, SSL certificates, installing WordPress and more.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-4">
+          <div class="card shadow-2 shadow-2-hover mt-4 mt-md-0">
+            <div class="card-header">
+              <h3 class="text-secondary">Deployment</h3>
+            </div>
+            <div class="card-body">
+              <p> Already have a developed website or application and now need to deploy it to a server?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-4">
+          <div class="card shadow-2 shadow-2-hover mt-4 mt-md-0">
+            <div class="card-header">
+              <h3 class="text-secondary">Site Management</h3>
+            </div>
+            <div class="card-body">
+              <p>Need someone to manage the content on your website? Contact me with the details</p>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-secondary btn-lg mt-5 shadow-2 shadow-2-hover" aria-pressed="true">Let's Get Started!</a>
+      </div>
     </div>
   </section>
 
-  <!-- CODING SERVICES - SECTION -->
-  <section id="design-services">
-      <div class="container">
-        <div class="row justify-content-between mt-5 border-top">
-          <div class="col-md-4 order-md-2">
-            <div class="d-flex justify-content-center mb-md-5">
-              <img id="computer" src="assets/svg/coding_computer_icon.svg" height="200px" alt="Design Icon">
-            </div>
-          </div>
 
-          <div class="col-md-7 order-md-1">
-            <h2 class="text-primary">Coding <span class="text-secondary">&</span> Develupment</h2>
-            <p>I am currently developing Informational based websites and light-weight web Applications for clients. All my code comes commented and is easlly read by other developers. This allows your project to be future proof in the event that you would desire to expand your project.</p>
-            <div class="d-sm-flex flex-row align-items-center mt-4 ">
-              <h3 class="text-primary"><span class="text-success">$50.00 - </span>Per Houre.</h3>
-              <a href="contact.html"><button type="button" class="btn ml-sm-4 btn-outline-primary mt-2">Contact For Estimate</button></a>
-            </div>
-          </div>
-        </div>      
-  
-        <div id="check-group-2" class="row justify-content-between my-3">
-          <!-- col 1 --> 
-          <div class="col-lg-5 col-md-6">
-            <div class="float-left">
-              <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-            </div>
-            <h4 class="mb-4">Website Development.</h4>
-            <div class="float-left">
-              <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-            </div>
-            <h4 class="mb-4">Web-App Development.</h4>
-            <div class="float-left">
-              <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-            </div>
-              <h4 class="mb-4">Search Engine Optimized.</h4>
-          </div>
-          <!-- col 2 -->
-          <div class="col-lg-5 col-md-6">
-            <div class="float-left">
-              <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-            </div>
-            <h4 class="mb-4">Assistive Technologies.</h4>
-            <div class="float-left">
-              <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-            </div>
-            <h4 class="mb-4">Responsive across all devices.</h4>
-            <div class="float-left">
-              <img class="mr-4" src="assets/svg/check.svg" height="25px" alt="Check Icon">
-            </div>
-              <h4 class="mb-4">Build What You Want.</h4>
-          </div>
-          <!-- col 3 -->
-        </div>
-      </div>
-    </section>
 
   <!-- MAIN FOOTER - FOOTER -->
-  <footer id="main-footer" class="footer bg-dark mt-5">
+  <footer id="main-footer" class="footer bg-dark">
     <div class="container">
-        <div class="row pt-5 justify-content-between">
-
-        <div class="col-md-6">
-          <h5>Web Develupment Service</h5>
-          <p class="mt-3">I am working on a business dedicated to developing websites. In the meantime If you're interested in having some work done let me know.</p>
-          <a id="footerLinkActive" class="mt-2 mr-4" href="services.html">What Can I Do For You?</a>
-          <a id="footerLink" class="mt-2" href="portfolio.html">View My Portfolio</a>
-        </div>
-
-        <div class="col-md-6 col-lg-5">
-            <h5 class="connect">Connect</h5>
-          <ul class="nav mt-2">
-            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fa fa-linkedin" aria-hidden="true"></i></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://twitter.com/LeachmanCapital?lang=en" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://plus.google.com/110990843868980982964" target="blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://github.com/globalumbrella" target="blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.pinterest.com/sjleachman/" target="blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+      <div class="row pt-3 pt-md-5 d-flex justify-content-between">
+        <div class="col-12 col-md-5 col-lg-4 order-2 order-md-1">
+          <h5 class="text-light">Website Content</h5>
+          <ul class="nav flex-column ">
+            <li>
+              <a class="btn btn-link" href="index.html">About</a>
+            </li>
+            <li>
+              <a class="btn btn-link disabled" href="services.html">Services</a>
+            </li>
+            <li>
+              <a class="btn btn-link" href="personal_projects.html">Personal Projects</a>
+            </li>
+            <li>
+              <a class="btn btn-link" href="dev_projects.html">Development Projects</a>
+            </li>
+            <li>
+              <a class="btn btn-link" href="contact.html">Contact</a>
+            </li>
           </ul>
-          <h5 class="mt-3">TradingView</h5>
-          <p>If you're interested in learning more about my trading, Check out my profile @ <a class="badge badge-dark" href="https://www.tradingview.com/u/stephenleachman/" target="blank">TradingView.com</a></p>
         </div>
-      </div>
+        <div class="col-12 col-md-6 col-lg-4 ">
+          <div class="d-flex justify-content-center mb-3 mt-4 mt-md-0">
+            <img src="assets/svg/logo_manogram.svg" height="30px" alt="">
+          </div>
+          <p class="text-center mb-5 text-light">UX/UI Design | Web Development | Trading/Investing</p>
+          <h5 class="text-light">Some Info</h5>
+          <ul class="nav flex-column mb-0 mb-md-4 mb-lg-0">
+            <li>
+              <a class="btn btn-link disabled" href="faqs.html">FAQ's</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 order-1 order-mb-2">
+          <h5 class="text-light">Connect On Social Media</h5>
+          <ul class="nav flex-column mt-2">
 
-      <div class="row justify-content-center mt-4 pb-3">
-        <p class="small text-center">&COPY;2018 sjleachman.com All Rights Reserved</p>
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.linkedin.com/in/stephen-leachman-588b73133/" target="blank"><i class="fa fa-linkedin fa-1" aria-hidden="true"></i></i>LinkedIn</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://twitter.com/sjleachman/" target="blank"><i class="fa fa-twitter fa-2" aria-hidden="true"></i>twitter</a>
+            </li>
+
+            <li class="nav-item"><a class="btn btn-link" href="https://plus.google.com/110990843868980982964" target="blank"><i class="fa fa-google-plus fa-3"   aria-hidden="true"></i>Google Plus</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://github.com/sjleachman/" target="blank"><i class="fa fa-github fa-4" aria-hidden="true"></i>Github</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.youtube.com/channel/UCOwuzsGL8AomtaIjAgOgs2A?view_as=subscriber" target="blank"><i class="fa fa-youtube-play fa-5" aria-hidden="true"></i>YouTube</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.instagram.com/sjleachman/" target="blank"><i class="fa fa-instagram fa-6" aria-hidden="true"></i>Instagram</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.pinterest.com/sjleachman/" target="blank"><i class="fa fa-pinterest-p fa-7" aria-hidden="true"></i>Pinterest</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-link" href="https://www.facebook.com/pg/Stephen-Leachman-319945145221895/" target="blank"><i class="fa fa-facebook-official fa-8" aria-hidden="true"></i>Facebook</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 mt-4 pb-2 order-4">
+          <p class="small text-center">&COPY;2018 sjleachman.com All Rights Reserved</p>
+        </div>
       </div>
     </div>
-  </footer>
-  
+  </footer> <!-- / MAIN FOOTER - FOOTER -->
 
+  
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/anime.min.js"></script>
   <script src="js/animations.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/navbar-fixed.js"></script>
+  <!-- <script src="js/Chart.bundle.min.js"></script>
+  <script src="js/charts.js"></script> -->
+
 </body>
 </html>

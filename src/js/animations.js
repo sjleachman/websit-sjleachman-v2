@@ -103,14 +103,21 @@ var winTracker = addEventListener('scroll', function(e){
   ___________________________________________________
 */
 // ___________________________________________________
+// New Animations
+
+
+
+
+
+// ___________________________________________________
 // Signature Animations - About Page
 var nameStroke = anime({
     targets: '#name .lines path',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
     stroke: [
-      {value: '#039BE5'},
-      {value: '#fff'}
+      {value: '#0083b0'},
+      {value: '#ecf0f1'}
     ],
     duration: 1500,
     delay: function(el, i) { return i * 250 },
@@ -121,9 +128,9 @@ var nameStroke = anime({
 var nameColor1 = anime({
   targets: '#name .lines .st0',
   fill: [
-    {value: '#039BE5'}, 
-    {value: '#00ACC1'},
-    {value: '#039BE5'},
+    {value: '#0083b0'}, 
+    {value: '#0083b0'},
+    {value: '#0083b0'},
   ],
   easing: 'easeInSine',
   delay: function(el, i) { return i * 350 },
@@ -135,9 +142,9 @@ var nameColor1 = anime({
 var nameColor2 = anime({
   targets: '#name .lines .st1',
   fill: [
-    {value: '#00ACC1'},
-    {value: '#039BE5'},
-    {value: '#00ACC1'},
+    {value: '#0083b0'},
+    {value: '#0083b0'},
+    {value: '#0083b0'},
   ],
   easing: 'easeInSine',
   delay: function(el, i) { return i * 350 },
@@ -183,7 +190,7 @@ var card3 = anime.timeline({
 card1
   .add({
       targets: '#cardSoftwears',
-      translateX: [-50, 0],
+      translateY: [40, 0 ],
       duration: 500,
       easing: [.90, -0.10, .29, 1.90],
       elasticity: 200,
@@ -211,7 +218,7 @@ card2
       translateY: [40, 0 ],
       duration: 500,
       easing: [.90, -0.10, .29, 1.90],
-      offset: '+=3000',
+      offset: '+=2000',
       opacity: [.0, 1],
   })
    // progress-bar
@@ -232,10 +239,10 @@ card2
 card3
   .add({
     targets: '#cardTrading',
-    translateX: [50, 0],
+    translateY: [40, 0 ],
     duration: 500,
     easing: [.90, -0.10, .29, 1.90],
-    offset: '+=5500',
+    offset: '+=3500',
     opacity: [.0, 1],
   })
    // progress-bar
@@ -290,7 +297,7 @@ card2Respansive
 card3Respansive
   .add({
     targets: '#cardTrading',
-    translateX: [50, 0],
+    translateY: [40, 0 ],
     duration: 500,
     easing: [.90, -0.10, .29, 1.90],
     opacity: [.0, 1],
@@ -348,7 +355,7 @@ var codingDesignIcons = anime.timeline({
 codingDesignIcons
   .add({
     targets: '#codingDesignIconGroup .design-icon',
-    translateX: [-80, 0],
+    translateY: [-50, 0],
     scale: [1.4, 1],
     duration: 2000,
     opacity:[.0, 1.0],
@@ -365,7 +372,7 @@ codingDesignIcons
 
   .add({
     targets: '#codingDesignIconGroup .coding-icon',
-    translateX: [80, 0],
+    translateY: [-50, 0],
     scale: [1.4, 1],
     duration: 2000,
     offset: '-=1800',

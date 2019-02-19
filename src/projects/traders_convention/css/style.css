@@ -1,0 +1,42 @@
+.light-gray {
+  background: whitesmoke; }
+
+.navbar .navbar-nav a {
+  font-weight: 700; }
+
+.navbar .navbar-brand {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem; }
+
+.jumbotron {
+  background-image: url("../img/img3.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 0;
+  height: 100vh; }
+  .jumbotron .row {
+    height: 100%; }
+
+.jumbotron .container {
+  position: relative;
+  z-index: 3; }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #323741;
+  z-index: 2;
+  opacity: 0.85; }
+
+#about h3 {
+  border-bottom: 1px solid #06858C; }
+
+.modal-content {
+  border: none;
+  border-radius: none; }
+
+@media (max-width: 768px) {
+  .jumbotron .container h1 {
+    font-size: 3.8rem; } }

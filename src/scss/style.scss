@@ -1,636 +1,821 @@
-// GLOBAL - COLOR THEME
-$primary: #039BE5 !default;
-$secondary: #00ACC1 !default;
-$gradient: linear-gradient(to bottom right, #039BE5, #00ACC1) !default;
-$light-primary: #E6E9ED !default;
-$dark-primary: #263238 !default;
+/*
+ ________ Custom Bootstrap Theme ________
+*/
 
+$enable-shadows:            false;
+$enable-gradients:          false;
 
+// Color Theme
+$primary:         #00b4db;
+$secondary:       #0083b0;
+$success:         #2ecc71;
+$warning:         #fc0;
+$orange:          #ff9500;
+$teal:            #20c997;
+$cyan:            #17a2b8;
+$light:           #ecf0f1;
+$light-2:         white;
+$dark:            #263238;
+$dark-2:          #6c7686;
+$gradient:        linear-gradient(to right, $primary, $secondary);/* Chrome 10-25, Safari 5.1-6 */
 
-// GLOBAL - FONT SIZE THEME
-$p: 1.4rem;
+$theme-colors: (
+  "primary":      #00b4db,
+  "secondary":    #0083b0,
+  "light":        #ecf0f1,
+  "dark":         #263238
+);
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 770px,
+  lg: 992px,
+  xl: 1200px
+);
 
+// Font Theme
+$headings-color:        $dark;
+$body-color:            $dark-2;
+$display3-weight:       100;
+$display4-weight:       80;
+$display4-size:         3.0rem;
 
-// GLOBAL - CONTAINER
-.container{
-  max-width: 1400px;
+// Button Theme
+$btn-font-weight:       500;
+//$btn-border-radius:     10px;
+
+// Card Theme
+//$card-border-radius:    10px;
+$card-bg:               $light-2;
+$card-cap-bg:           $light-2;
+$card-border-color:     $light;
+
+// List Group Themes
+$list-group-bg:         $light-2;
+
+//Include all of Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url("https://use.typekit.net/wil5hfj.css");
+
+/*
+ ________Global Styles________
+*/
+
+// Body
+body { font-family: Nunito,sans-serif; overflow-x: hidden; }
+//  Fonts
+.display-3 { letter-spacing: .1em; }
+h1, h2, h3, h4, h5 { color: #2e2e2e; }
+// Containers
+.container{ max-width: 1400px; }
+// Links
+a:hover { text-decoration: none; }
+// Lists
+ul { list-style: none; }
+// Shadow Theme
+.shadow-1{ box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); } 
+.shadow-2{ box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); } 
+.shadow-hover:hover{
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  transition: 500ms ease-in-out;
 }
-@media (max-width: 1430px){
-  .container{
-    padding: 0 40px 0 40px;
-  }
+.shadow-2-hover:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); 
+  transition: 500ms ease-in-out;
 }
-@media (max-width: 576px){
-  .container{
-    padding: 0 20px 0 20px;
-  }
+.border-bottom-2 { border-bottom: solid 2.5px; }
+// Header Text Styles
+.heading-lower { 
+  color: $light; 
+  font-size: 1.6em;
+  letter-spacing: 6px;
+  border-top: 1px solid $light;
 }
-@media (max-width:400px){
-  .container{
-    padding: 0 15px 0 15px;
+.heading-lower:hover { color: $light; }
+.heading-main {
+  font-size: 3.5em;
+  color: $light; 
+  letter-spacing: 10px;
+}
+
+ /* Spinner 1 */
+ .spinner-1::before{
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border: 3px solid #cecece;
+  border-top-color: $secondary;
+  animation: spinner 0.6s linear infinite;
+}
+@keyframes spinner {
+  to{
+      transform: rotate(360deg);
   }
 }
 
-// GLOBAL - MAIN NAV
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 767.98px) {
-  body nav ul{
-    li:first-child{
-      margin-top: 20px;
-    }
-    li:last-child{
-      margin-bottom: 20px;
-    }
-  } 
-}
-
-// GLOBAL - MAIN FOTTER - FOOTER
-#main-footer{
-  font-weight: 2000;
-  color: lightgray;
-  p{
-    color: #93999c;
+/*
+ ________Global Main Nav Styles________
+*/
+body nav{
+  .navbar-brand{
+    height: 25px;
+    padding-bottom: 30px;
+    margin-top: -10px;
   }
-  
-  #footerLink{
-    color: lightgray;
-  }
-  #footerLinkActive{
-    color: #93999c;
-    text-decoration: none;
-    cursor: auto;
-  }
-  #footerLink:hover{
-    color: $secondary;
-    text-decoration: none;
-  }
-  button:hover{
-    background: $gradient;
-    border: 1px solid $primary;
+  .dropdown-menu{
+    background: $dark;
+    border: none;
+    margin: 0;
+    color: $light;
+    padding: 15px ;
+    z-index: 9;
     a{
-      color: white;
+      color: #93999c;
+      padding: 0 10px 0 10px;
+      margin: 10px 10px 10px 10px;
     }
-  }
-  ul li .fa{
-    font-size: 22px;
-    color: lightgray;
-  }
-  ul li .fa:hover{
-   color: $secondary;
-  }
-  .badge{
-    color: lightgray;
-  }
-  .badge:hover{
-    background: $gradient;
-  }
-}
-@media (max-width: 767.98px) {
-  #main-footer{
-    h5 {
-      margin-top: 30px;
+    a:hover{
+      background: $dark;
+      color: $light;
+    }
+    .active{
+      border-left: 2px solid $light;
+      color: $light;
+      background: $dark; 
     }
   }
 }
-// MAIN FOOTER RESPANSAVNESS
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width:450px) {
+/*
+ ________Global Main Footer Styles________
+*/
+#main-footer{
+  color: $light-2;
+  h5{
+    border-bottom: $light 1px solid;
+    padding-bottom: 10px;
+  }
+  ul li .btn-link{
+    color: $light;
+    text-decoration: none;
+    .fa{
+      margin-right: 10px;
+      border-right: 1px solid $light;
+      padding-right: 5px;
+    }
+    .fa-1{
+      padding-right: 13px;
+    }
+    .fa-2{
+      padding-right: 12px;
+    }
+    .fa-3{
+      padding-right: 7px;
+    }
+    .fa-4{
+      padding-right: 13px;
+    }
+    .fa-5{
+      padding-right: 11px;
+    }
+    .fa-6{
+      padding-right: 13px;
+    }
+    .fa-7{
+      padding-right: 16px;
+    }
+    .fa-8{
+      padding-right: 13px;
+    }
+  }
+  ul li .btn-link:hover{
+    color: $light;
+    opacity: 0.6;
+    .fa{
+      border-right: 1px solid $light;
+      opacity: 0.6;
+    }
+  }
+}
+/*
+ ________Global Responsive Styles________
+*/
+// Extra large devices
+@media (max-width: 1200px) { 
+  .container{ padding: 0 40px 0 40px; }
+ }
+
+// Large devices
+@media (max-width: 992px) { 
+  .shadow-1{ box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); }
+  .shadow-hover:hover{
+    box-shadow: none;
+    transition: 500ms ease-in-out;
+  }
+ }
+
+// Medium devices 
+@media (max-width: 770px) { 
+  #main-footer{ h5 { margin-top: 30px; } }
+  body nav{
+    .dropdown-menu{
+      padding: 0;
+      margin: 5px 0 5px 15px;
+    }
+    ul{
+      li:first-child{ margin-top: 20px; }
+      li:last-child{ margin-bottom: 20px; }
+    } 
+  }
+}
+
+// Small devices 
+@media (max-width: 576px) { 
+  .heading-lower { font-size: 1.3em; letter-spacing: 4px;}
+  .heading-main { font-size: 3.0em; padding-top: 25px;}
+  .container{ padding: 0 20px 0 20px; }
   #main-footer{
     ul li a{
       padding-right: 10px;
       padding-left: 10px;
     }
-    ul li .fa{
-      font-size: 18px;
+    ul li .fa{ font-size: 18px; }
+  }
+}
+
+/*
+ ________About Page Styles________
+*/
+#about {
+  background: $light;
+  #header{
+    background: $gradient;
+    position: relative;
+    height: 390px;
+    width: 100%;
+  }
+  #header:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(-3deg);
+  }
+  // AVERTAR IMAGE
+  #about-me {
+      .avatar-img {
+      margin-top: -100px;
+      background-color: $light;
+      z-index: 1;
+    }
+    .card { 
+     min-height: 334px;
+     ul li:first-child{ border-top: none;} 
     }
   }
-}
+  // Name SVG
+  #name svg{ height: 80px; }
 
-
-// ABOUT PAGE 
-// ______________________________________________________________
-
-// PARTICUAL JS HEADER ELLAMENT
-#about{
-  overflow-x: hidden;
-}
-#about #header{
-  background: $gradient;
-  position: relative;
-  height: 550px;
-  width: 100%;
-}
-#about #header:after{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform-origin: top right;
-  transform: skewY(-3deg);
-}
-#about #particles-js{
-  position: relative;
-  width: 100%;
-  height: 650px;
-}
-
-// AVERTAR IMAGE
-#about #about-me .avatar-img{
-  margin-top: -100px;
-  z-index: 2;
-}
-
-#name svg{
-  height: 70px;
-}
-
-// WHAT I DO - LIST GROUP
-#about #about-me{
-  ul{
-    list-style: none;
-  }
-}
-
-// My Education - SECTION
-#about #egu-background {
-  img:first-child{
+  // Education - SECTION
+  #egu-background a{
+    height: 120px;
     position: relative;
+    z-index: 3;
+    background: $light;
+    margin-top: -67px;
   }
-  img:last-child{
-    position: absolute;
-  }
-}
-
-#about #education{
-  background: url('../assets/img/education_background.png')  no-repeat;
-  background-position: center;
-  position: relative;
-  min-height: 500px;
-  .background-overlay{
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  #education {
     background: $gradient;
-    opacity: 0.9;
+    position: relative;
+    width: 100%;
+    .container {
+      z-index: 3;
+      position: relative;
+      .card { min-height: 250px; }
+    }
   }
-  .education-icon{
-    z-index: 2;
-    margin-top: -50px;
-  }
-  a{
-    color: white;
-    font-weight: 600;  
-  }
-  a:hover{
-    color: #E6E9ED;
-    text-decoration: none;
-  }
-}
-
-// My SKILLS - SECTION
-#about #skills{
-  background-color: $dark-primary;
-  padding-bottom: 30px;
-  
-  img{
-    margin-top: -50px;
-    z-index: 7;
-  }
-  .card {
-    border-radius: 10px;
-    height: 100%;
-    .card-body{
+  // My SKILLS - SECTION
+  #skills{
+    background-color: $dark;
+    position: relative;
+    a img{
+      margin-top: -53px;
+      z-index: 9;
+      position: relative;
+      background: $dark;
+    }
+    .card {
       border-radius: 10px;
-      input{
-        border: none;
-        background: $light-primary;
-        text-align: right;
-        width: 50px;
-      }
-      .progress{
+      height: 100%;
+      .card-body {
         border-radius: 10px;
-        height: 10px;
-        background-color: white;      
-        .progress-bar{
+        background: $light;
+        input{
+          border: none;
+          background: $light;
+          text-align: right;
+          width: 50px;
+        }
+        .progress{
           border-radius: 10px;
-          background-color: $gradient;
+          height: 8px;
+          background-color: white;      
+          .progress-bar{
+            border-radius: 10px;
+            background-color: $secondary;
+          }
         }
       }
     }
   }
-}
-
-// MY TRADING - SECTION
-#about #about-trading {
-  background-color: $light-primary;
-  svg{
-    margin-top: -50px;
-    height: 100px;
-  }
-  #tab-display .list-group {
-    border-radius: 5px;
-  }
-  #content-display{
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 15px;
-    a:hover{
-      text-decoration: none;
+  // TRADING - SECTION
+  #about-trading {
+    background-color: $light;
+    position: relative;
+    h1 {
+      z-index: 4;
     }
-    
-  }
-  .active{
-    background-color: $gradient;
-  }
-}
-
-// MY DESIGN AND CODING - SECTION
-#about #about-design-coding {
-  background-color: $light-primary;
-  .pluse-icon{
-    margin-top: 15px; 
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-  #content-display{
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 20px;
-    a:hover{
-      text-decoration: none;
+    svg{
+      margin-top: -50px;
+      height: 120px;
+      z-index: 3;
+      position: relative;
+      background: $light;
     }
-  }
-  .active{
-    background-color: $gradient;
-  }
-}
-
-// ABOUT PAGE // - RESPANSIVE BREAKPOINTS
-// ___________ | ||  ||   |
-
-// CUSTUM SCREEN SIZE
-@media (max-width: 1500px){
-  // PARTICUAL JS HEADER ELLAMENT
-  #about #header{
-    height: 400px;
-  }
-  // AVERTAR IMAGE
-  #about #about-me .avatar-img{
-    height: 210px;
-    margin-top: -70px;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) { 
-  // AVERTAR IMAGE
-  #about #about-me .avatar-img{
-    height: 190px;
-    margin-top: -70px;
-  }
-  #about #name svg{
-    height: 55px;
-  }
-  #content-display{
-    padding: 10px;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 767.98px) {
-  // PARTICUAL JS HEADER ELLAMENT
-  #about #header{
-    height: 300px;
-  }
-  // AVERTAR IMAGE
-  #about #about-me .avatar-img{
-    height: 150px;
-    margin-top: -60px;
-  }
-  #about #name svg{
-    height: 40px;
-  }
-  // MY TRADING - SECTION
-  #about #about-trading{
-    #content-display{
-      padding:10px;
-      margin: 16px;
+    .card{
+      z-index: 3;
+      .separator{ border-left: 1px solid $secondary; }
+      .card-header{ 
+        border-bottom: none; 
+      }
+    }
+    .nav{ 
+       .active:first-of-type { border-radius: .25rem 0 0 0;
+      }
+      .active{
+        background-color: $gradient;
+      }
+      a{
+        font-size: 1.1em;
+        padding: 6px 30px 6px 30px;
+        font-weight: 450;
+        border-radius: 0;
+      }
+    }
+    // Trading Card Inner Content
+    #content-display1{
+      padding: 15px;
+      h5 { color:  $secondary; }
+      .trading-analysis-group{
+        ul{ 
+          padding: 0;
+          li{
+            margin-bottom: 40px;
+          }
+        }
+        .trading-analysis-icons {
+          max-height: 90px;
+          float: left;
+          margin-right: 30px;       
+          max-width: 120px;
+        }
+      }
+      .trading-strategy-group{
+        ul{ padding: 0;
+          li{ margin-bottom: 30px; }
+        }
+        .trading-strategy-icons{
+          max-height: 90px;
+          max-width: 120px;
+          float: left;
+          margin-right: 30px; 
+        }
+      }
+      #list-risk-m{
+        h3 .fa{
+          font-size: .65em;
+          margin-left: 10px;
+          color: $dark;
+        }
+      }
     }
   }
-  // MY DESIGN AND CODING
-  #about #about-design-coding{
-    #content-display{
-      padding:10px;
-      margin: 16px;
+  // MY DESIGN AND CODING - SECTION
+  #about-design-coding {
+    position: relative;
+    background: $gradient;
+    h1 {
+      z-index: 4;
+      color: $light;
     }
-  }
-}
-
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width:400px) { 
-  // My Education 
-#about #what-i-do{
-    h3, h4 {
-      font-size: 1.2em;
+    img {
+      z-index: 9;
+      margin-top: -60px;
+      position: relative;
+      background: $light;
     }
-    img{
-      margin: 0 10px;
+    #flotingIcons .col{
+      z-index: 3;
+      .img-1 {
+        margin-top: 100px;
+        max-height: 135px;
+      }
+      .img-2 {
+        margin-top: 10px;
+        max-height: 100px;
+        animation-delay: 1s;
+      }
+      .img-3 {
+        margin-top: 100px;
+        max-height: 120px;
+        animation-delay: 2s;
+      }
+      .img-4 {
+        max-height: 122px;
+        margin-top: 20px;
+        animation-delay: 1s;
+      }
+      .img-5 {
+        margin-top: 100px;
+        max-height: 145px;
+        animation-delay: 1.5s;
+      }
     }
-  }
-  #about #education {
-    background: none;
-    h4{
-      font-size: 1.2em;
-      margin-bottom: 70px;
-      //padding-left: -20px;
+    .floating-icon {
+      animation: floting 3s ease infinite normal none;
+      animation-play-state: running;
+      animation-delay: 1.5s;
+      @keyframes floting {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+      }
     }
-  }
-  #design-coding-icon-group{
-    img{
-      height: 80px;
-    }
-    h1{
-      padding: 0 10px;
+    .card{
+      z-index: 9;
     }
   }
 }
-
-// SERVICES PAGE 
-// ______________________________________________________________
-
+/*
+ ________ Services Page Styles________
+*/
 #services{
-  background: $light-primary;
-  button{
-    margin-bottom: 10px;
-  }
-  button:hover{
+  background: $light;
+  header{
     background: $gradient;
-    a{
-      color: white;
-    }
+    position: relative;
+    height: 390px;
+    width: 100%;
   }
-  #services-overview{
-    padding-bottom: 20px;
+  header:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(-3deg);
+  }
+  #video_group {
+    .fa { 
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      color: $dark;
+      font-size: 20px;
+      margin-right: 10px
+    } .fa:hover { opacity: 0.7;}
+  }
+  #row-padding {
+    padding-bottom: 50px;
+  }
+  #design-heading {
+    margin-top: -70px;
+    padding-bottom: 80px;
+  }
+  #ui_design {
     background: $gradient;
-  } 
-  .border-top{
-    border-top: 1px solid $primary;
-    padding-top: 30px;
-  }
-}
-// SERVICES PAGE // - RESPANSIVE BREAKPOINTS
-// ___________ | ||  ||   |
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #services{
-    #computer {
-      height: 160px;
+    padding-bottom: 80px;
+    .card {
+      .card-header{ 
+        border-bottom: none;
+        .nav { 
+          li:first-of-type .active { border-radius: .25rem 0 0 0; }
+          a{
+            padding: 6px 20px 6px 20px;
+            border-radius: 0;
+          }
+        } 
+      }
+    }
+    .fa { margin-left: 10px; }
+    #design_icon img {
+      background: $light;
+      margin-top: -130px
     }
   }
-  h4{
-    font-size: 1.2em;
+  #web_develupment {
+    padding-bottom: 80px;
+    .fa { margin-left: 10px; }
+    .card {
+      .card-header { 
+        border-bottom: none; 
+        .nav { 
+          li:first-of-type .active { border-radius: .25rem 0 0 0; }
+          a {
+            padding: 6px 20px 6px 20px;
+            border-radius: 0;
+          }
+        } 
+      }
+    }
+    #design_icon img {
+      margin-top: -50px;
+      background: $light;
+    }
   }
-}
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 767.98px) {
-  #services{
-    #services-overview{
-      padding-top: 30px;
-    }
-    #computer {
-      height: 130px;
-      margin-bottom: 20px;
-    }
-    #services-overview{
-      min-height: 300px;
-    } 
-    #check-group img{
-      height: 18px;
-    }
-  }
-}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width:400px) {
-  #services{
-    #services-overview{
-      padding-bottom: 20px;
-    } 
-    #check-group img{
-      height: 14px;
-    }
-    h4{
-      font-size: 1em;
-    }
+  #otherServices { 
+    img { background: $light; margin-top: -60px;}
+    background: $gradient;
+    padding-bottom: 80px;
   }
 }
 
-// PORTFOLIO PAGE 
-// ______________________________________________________________
-
-#portfolio{
+/*
+ ________ Portfolio Page Styles ________
+*/
+#portfolio {
+  header {
+    background: $gradient;
+    position: relative;
+    height: 390px;
+    width: 100%;
+    span { z-index: 5; position: relative;}
+    h1 { z-index: 3; position: relative; }
+    a {
+      z-index: 4;
+      position: relative;
+    }
+  }
+  header:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(-3deg);
+  }
   nav ul li .on{
     color: #E6E9ED;
   }
+  .loader{
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    background-color: $light;
+    
+  }
   .wrapper{
     min-height: calc(100vh - 0px); //THE FOOTER HEIGHTH IS 280px
-    background: $light-primary;
-
-    #portfolio-overview{
-      background: white;
+    background: $light;
+    #portfolio-overview {
+      .row { margin-top: -100px; }
+      background: $light;
       button:hover{
         background: $gradient;
-        a{
-          color: white;
-        }
+        a{ color: $light; }
       }
-      .active{
+      .activeButton{
         background: $gradient;
-        a{
-          color: white;
-        }
+        color: $light;
+      }
+      .card {
+        z-index: 3;
       }
     }
-
+    // Project Group
     #projects{
-      background: $light-primary;
-  
+      background: $light;
       .grid-item-content {       
         max-width: 100%;
-        padding: 10px;
-        //margin-bottom: 10px;
-  
-        img{
+        padding: 10px; 
+        img {
           display: block;
           width: 100%; 
           border-radius: 10px;
           height: auto;
         }
-        
-        .card{
-          border-radius: 10px;
-
+        .card {
+          box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+          h4 { color: $secondary; }
           .card-img-top{
             position: relative;
-            
+            background: $gradient;    
+            z-index: 1;
+            .fad{
+              position: absolute;
+              width: 100%;
+              height: 50px;
+              background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+              bottom: 0;
+              z-index: -1;
+            }
             .smooth{
               position: absolute;
               bottom: 50%;
               left: 0;
               right: 0;
               background: $gradient;
-              opacity: 0.9;
+              opacity: 1;
               overflow: hidden;
               width: 100%;
               height: 0;
               transition: .5s ease;
-
+              .row {
+                height: 100%;
+              }
               .btn {
-                white-space: nowrap; 
                 display: none;
-                position: absolute;
-                overflow: hidden;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-
-                a{
-                  color: white;
-                }
+                a{ color: white; }
               }
             }
           }
-          .badge{
+          .card-body {
+            .btn-link { color: $secondary; }
+            .btn-link:hover { opacity: 0.8; }
+            h5 { color: $secondary; }
+            ul li { margin-right: 0; }
+          }
+          .badge {
             border-radius: 5px;
             background: $primary;
           }
-          a:hover{
+          a:hover {
             text-decoration: none;
-          }
-          a.badge{
+          } 
+          a.badge {
             background: $secondary;
           }
           .card-footer{
-      
-            ul{
-              li a{
-                color: $dark-primary;
-              }
+            ul {
+              li a{ color: $dark; }
             }
           }
         }
         // HOVER EFFICS
-        .card-img-top:hover .smooth{
+        .card:hover { box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); transition: 500ms ease-in-out; }
+        .card-img-top:hover .smooth {
           height: 100%;
           bottom: 0;
           border-radius: 10px 10px 0 0;
-          .btn{
+          .btn {
             display: block;
             cursor: pointer;
+            transition: ease-in 4s;
+           // transition: ease-in-out 1s;
           }
         }
-        .btn:hover{
-          background: none;
-        }
-        a.badge:hover{
-          background: $dark-primary;
-        }
-        .card-footer ul li a:hover{
-          color: $primary;
+        .btn:hover{ background: none; }
+        a.badge:hover{ opacity: 0.9; }
+        .card-footer ul li a:hover{ opacity: 0.8; }
+      }
+    }
+  }
+}
+
+/*
+ ________ Personal Portfolio Page Styles ________
+*/
+#personalProjects {
+  background: $light;
+  header {
+    background: $gradient;
+    position: relative;
+    height: 390px;
+    width: 100%;
+    span { z-index: 5; position: relative; }
+    h1 { z-index: 3; position: relative; }
+    a {
+      z-index: 4;
+      position: relative;
+    }
+  }
+  header:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(-3deg);
+  }
+  #overview {
+    .row {
+      margin-top: -100px;
+    }
+    .card {
+      z-index: 3;
+    }
+  }
+  #projects {
+    .card-columns {
+      @include media-breakpoint-only(sm) {
+        column-count: 2;
+      }
+      @include media-breakpoint-only(md) {
+        column-count: 2;
+      }
+      .card {
+        .card-header { height: 150px; }
+        img { padding: 15px 50px 15px 50px; }
+        .card-body {
+          .nav li a{ color: $dark; }
+          .nav li a:hover{ opacity: 0.8; }
+          a:hover { text-decoration: none; }
+          .website { color: $dark; }
+          .website:hover { opacity: 0.8; }
         }
       }
     }
   }
 }
 
-// PORTFOLIO PAGE // - RESPANSIVE BREAKPOINTS
-// ___________ | ||  ||   |
+ 
+  
 
-@media (max-width: 1200px) {
-  #portfolio .wrapper #projects{
 
-    .grid-item-content { 
-      padding: 5px;
-      
-    }
-  }
-}
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 767.98px) {
-  #portfolio .wrapper #projects{
-
-    .grid-item-content { 
-      padding: 10px;
-      margin-bottom: 10px;
-      .smooth{
-        display: none;
-      }
-    }
-  }
-}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width:400px) {
-  #portfolio .wrapper #projects{
-
-    .grid-item-content { 
-      padding: 0px;
-      margin-bottom: 20px;
-      
-    }
-  }
-}
-
-// CONTACT PAGE 
-// ______________________________________________________________
-
+/*
+ ________ Contact Page Styles ________
+*/
 #contact{
   #background .alert {
-    z-index: 200000;
+    //z-index: 200000;
     position: absolute;
     width: 100%;
     height: 50px;
   }
- 
   #background{
-    height: calc(100vh - 59.5px);
+    height: calc(100vh );
     width: 100%;
     background: $gradient;
     position: relative;
-       
-    #particles-js{
-      position: absolute;
-     //z-index: 1;
-      width: 100%;
-      height: calc(100vh - 66.0px);
-    }
   }
-  .form{
-    z-index: 999;
-  }
-  .form-head{
+  .form { z-index: 999; }
+  .form-head {
+    img { background: $light; }
     z-index: 3;
     position: relative;
-    background: $dark-primary;
+    background: $dark; 
     border-radius: 10px 0 0 10px;
-    ul{
+    .contact-info h6 { font-weight: 400; color: $light; }
+    ul {
       position: absolute;
       bottom: 0;
       margin-bottom: 10px;
-      li a{
+      li a {
         padding: 10px;
         font-size: 1.1em;
-        color: $light-primary;
+        color: $light;
       }
-      li a:hover{
-        color: $secondary;
-      }
+      li a:hover{ opacity: 0.6; }
     }
   }
   .form-body{
@@ -638,7 +823,7 @@ $p: 1.4rem;
     border-radius: 0 10px 10px 0;
     z-index: 100000;
   }  
-  .form{
+  .form{ 
     margin: auto;
     button{
       background: $gradient;
@@ -646,90 +831,183 @@ $p: 1.4rem;
     }
     button:hover{
       background: $gradient;
-      color: $light-primary;
+      color: $light;
     }
   }
 }
-// CONTACT PAGE // - RESPANSIVE BREAKPOINTS
-// ___________ | ||  ||   |
 
-@media (max-width: 860px) {
-  #contact{
-    h6{
-      font-size: .9em;
-    }
-    .form-head ul{
-      margin-bottom: 10px;
-     
-      li a{
-        font-size: .9em;
-        padding: 8px;
-      }
-    }
-    .form{
-      margin: auto;
+
+
+
+/*
+ ________Respansive Breakpoints Styles________
+*/
+// Extra large devices (large desktops, 1200px and Down)
+@media (max-width: 1200px) { 
+  // About Page
+  #about {
+    #header{ height: 350px; }
+    #about-me {
+      .avatar-img{
+        height: 210px;
+        margin-top: -70px;
+      } 
     }
   }
+  #personalProjects #projects .card-columns .card img { padding: 15px 25px 15px 25px; } 
 }
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 767.98px) {
-  #contact{
-    #background{
-      height: auto;      
-      #particles-js{
-        height: calc(100% - 6px);
+
+
+// Large devices (desktops, 992px and Down)
+@media (max-width: 992px) { 
+   // About Page
+   #about {
+    #about-me {
+      .avatar-img{
+        height: 200px;
+        margin-top: -70px;
+      }
+      .card { min-height: auto; }
+    }
+    #name svg{ height: 65px; }
+    #about-trading .card{
+      .separator{ border-left: none; }
+      #content-display{ padding: 10px; }
+    }
+    #education .container .card { min-height: 100px; }
+  }
+  #personalProjects #projects .card-columns .card img { padding: 15px 50px 15px 50px; } 
+}
+
+
+// Medium devices (tablets, 768px and Down)
+@media (max-width: 770px) { 
+  // About Page
+  #about {
+    #header { height: 300px; }
+    #about-me {
+      .avatar-img{
+        height: 170px;
+        margin-top: -60px;
       }
     }
-    
-    .form-head{
+    #name svg{ height: 60px; }
+    #about-trading {
+      .nav{ .active:first-of-type { border-radius: .25rem .25rem 0 0; } }
+      #content-display{
+        padding:10px;
+        margin: 16px;
+      }
+    }
+  } 
+  #services #ui_design .card .card-header .nav li:first-of-type .active { border-radius: .25rem .25rem 0 0; } 
+  #services #web_develupment .card .card-header .nav li:first-of-type .active { border-radius: .25rem .25rem 0 0; } 
+  #services #design-heading #remove-border-top { border-top: 1px #dee2e6 solid; } 
+  #portfolio .wrapper #portfolio-overview .card-filter {
+   margin-top: 23px;
+  }
+  #contact{
+    #background { height: auto; }
+    .form-head {
       max-width: 500px;
-      margin: 100px 20px 0 20px;
-      height: 290px;
-      background-color: rgba(38, 50, 56, 0.616);
+      margin: 0px 20px 0 20px;
+      height: 320px;
+      background-color: rgba(38, 50, 56, 0.623);
       border-radius: 10px 10px 0 0;
-      .contact-info{
+      .contact-info {
         text-align: center;
         margin-top: -25px;
       }
-      ul{
-        margin-bottom: 10px;
-
-        li a{
+      ul { margin-bottom: 10px;
+         li a{
           padding: 10px;
-          font-size: 1.2em;
+          font-size: 1.3em;
         }
       }
     }
-    .form-body{
+    .form-body {
       max-width: 500px;
       margin: 0 20px 50px 20px;
       border-radius: 0 0 10px 10px;
     }
-    .form{
+    .form {
       margin: auto;
-      button{
-      margin-bottom: 10px;
+      button { margin-bottom: 10px; }
+    }
+  }
+  #personalProjects #projects .card-columns .card img { padding: 15px 20px 15px 20px; } 
+}
+
+
+// Small devices (landscape phones, 576px and Down)
+@media (max-width: 576px) { 
+ 
+  #about {
+    #header { height: 250px; }
+    #name svg{ height: 40px; }
+    #about-design-coding {
+      #flotingIcons .col {
+        .img-1 {
+          margin-top: 100px;
+          max-height: 90px;
+          animation-delay: 1.8s;
+        }
+        .img-2 {
+          margin-top: 10px;
+          max-height: 80px;
+          animation-delay: 1.4s;
+        }
+        .img-3 {
+          margin-top: 70px;
+          max-height: 100px;
+          animation-delay: 1s;
+        }
+        .img-4 {
+          max-height: 70px;
+          margin-top: 20px;
+          animation-delay: 2s;
+        }
       }
     }
   }
-}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width:450px) {
-  #contact{
-    .form-body{
+  #services {
+    #design-heading { margin-top: -90px; }
+    #row-padding { padding-bottom: 30px; }
+  }
+  #contact {
+    .form-body {
       padding-right: 0;
       padding-left: 0;
     }
-    .form-head{
-      ul li a{
-        padding: 10px;
-        font-size: .9em;
-      }
+    h6 { font-size: 1em; }
+    .form-head { height: 315px;
+      ul li a { padding: 10px; }
     }       
   }
+  #personalProjects #projects .card-columns .card img { padding: 15px 80px 15px 80px; } 
 }
-@media (max-width:388px) {
-  #contact .alert button{
-    display: none;
+
+// Custum Respansive
+@media (max-width: 500px) {
+  #personalProjects #projects .card-columns .card img { padding: 15px 50px 15px 50px; } 
+}
+// iPhone 6
+@media (max-width: 375px) {
+  #personalProjects #projects .card-columns .card img { padding: 15px 25px 15px 25px; } 
+}
+// iPhone 5
+@media (max-width: 360px) {
+  #personalProjects #projects .card-columns .card {
+    img { padding: 15px 10px 15px 10px; } 
+  }
+  .heading-lower { font-size: .9em; }
+  .heading-main { font-size: 2.5em; }
+}
+// Custum Respansive Cantcat Form
+@media (max-width: 860px) {
+  #contact { h6{ font-size: 1em; } 
+    .form-head ul { margin-bottom: 10px;  
+      li a { font-size: .9em; padding: 8px; } }
+    .form { margin: auto; } 
   }
 }

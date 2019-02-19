@@ -1,0 +1,53 @@
+body {
+  margin-top: 105px; }
+
+.navbar {
+  box-shadow: 2px 2px 5px #EFC94C;
+  background: #fff; }
+  .navbar .nav-item {
+    font-size: 1.4rem;
+    padding-right: 20px; }
+
+#showcase {
+  position: relative;
+  margin-top: -12px;
+  background: url("../img/background_img.jpg");
+  min-height: 600px;
+  background-size: cover; }
+  #showcase .primary-overlay {
+    background: rgba(239, 201, 76, 0.856);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px #ddd solid; }
+
+#authors img {
+  margin-top: -50px; }
+
+#authors h3 {
+  color: #324D5C; }
+
+#authors .fa {
+  font-size: 25px;
+  color: #324D5C; }
+
+#authors .card:hover {
+  background: #324D5C;
+  color: #fff;
+  transition: ease-in-out 500ms; }
+  #authors .card:hover h3 {
+    color: #EFC94C;
+    transition: ease-in-out 500ms; }
+  #authors .card:hover .fa {
+    color: #EFC94C;
+    transition: ease-in-out 500ms; }
+
+@media (max-width: 444px) {
+  body #showcase .container h1 {
+    font-size: 2.9em; } }
